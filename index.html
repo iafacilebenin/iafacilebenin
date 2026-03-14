@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA Facile Bénin — L'Intelligence Artificielle au service de l'Afrique</title>
+<meta name="description" content="Formation IA, bots Telegram, création de sites web et tuteur numérique pour entrepreneurs francophones d'Afrique de l'Ouest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDFAF5;--s1:#F5F0E8;--s2:#EDE6D8;--border:#D8CEBC;--gold:#FF9E1B;--teal:#009970;--coral:#E8204A;--text:#1A1408;--muted:#7A6A50;--fh:'Syne',sans-serif;--fm:'DM Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fh);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.02'/%3E%3C/svg%3E");pointer-events:none}
+body::after{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 700px 500px at 90% 0%,rgba(255,158,27,.12) 0%,transparent 60%),radial-gradient(ellipse 500px 400px at 0% 100%,rgba(0,153,112,.07) 0%,transparent 60%);pointer-events:none}
+section,header,nav,footer{position:relative;z-index:1}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border);backdrop-filter:blur(16px);background:rgba(253,250,245,.92);position:sticky;top:0;z-index:100}
+.logo{font-size:1.05rem;font-weight:800;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+.logo span{color:var(--text);opacity:.5}
+.nav-right{display:flex;gap:.6rem;align-items:center}
+.nav-link{font-family:var(--fm);font-size:.65rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;display:none}
+.nav-link:hover{color:var(--text)}
+.nav-cta{background:var(--gold);color:#000;font-family:var(--fm);font-size:.68rem;font-weight:500;padding:.5rem 1rem;border:none;cursor:pointer;text-decoration:none;letter-spacing:.05em;transition:all .2s}
+.nav-cta:hover{background:#fff;transform:translateY(-1px)}
+@media(min-width:700px){.nav-link{display:inline}}
+
+/* HERO */
+.hero{min-height:94vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 4rem;position:relative;overflow:hidden}
+.hero-visual{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-circle{position:absolute;border-radius:50%;background:conic-gradient(from 180deg,rgba(255,158,27,.2),rgba(0,153,112,.08),transparent 60%);width:700px;height:700px;top:-200px;right:-200px;animation:spin 20s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-line{position:absolute;width:1px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);height:60%;top:20%;opacity:.3}
+.hero-tag{font-family:var(--fm);font-size:.62rem;color:var(--teal);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:up .5s .1s ease forwards}
+.hero-title{font-size:clamp(2.8rem,9vw,6rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:1.5rem;opacity:0;animation:up .6s .2s ease forwards}
+.hero-title .hl{color:var(--gold)}
+.hero-sub{font-size:.95rem;color:var(--muted);max-width:440px;line-height:1.75;margin-bottom:2.5rem;opacity:0;animation:up .6s .3s ease forwards}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;animation:up .6s .4s ease forwards}
+.btn-p{background:var(--gold);color:#000;font-family:var(--fm);font-size:.75rem;font-weight:500;padding:.85rem 1.6rem;text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em}
+.btn-p:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,160,32,.2)}
+.btn-g{background:transparent;color:var(--text);font-family:var(--fm);font-size:.75rem;padding:.85rem 1.6rem;border:1px solid var(--border);text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em}
+.btn-g:hover{border-color:var(--teal);color:var(--teal)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;opacity:0;animation:up .6s .5s ease forwards}
+.hstat{border-left:2px solid var(--border);padding-left:1rem}
+.hstat-n{font-size:1.5rem;font-weight:800;color:var(--gold)}
+.hstat-l{font-family:var(--fm);font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* TICKER */
+.ticker-wrap{overflow:hidden;padding:.65rem 0;background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.ticker{display:flex;gap:2.5rem;animation:tick 26s linear infinite;white-space:nowrap}
+.ticker-item{font-family:var(--fm);font-size:.65rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
+.ticker-item b{color:var(--gold);margin-right:.4rem}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION */
+.sec{padding:5rem 1.5rem}
+.sec-lbl{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.sec-h{font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:.9rem}
+.sec-d{color:var(--muted);font-size:.9rem;line-height:1.75;max-width:480px;margin-bottom:2.5rem}
+@media(min-width:900px){.sec{padding:6rem 3rem}}
+
+/* SERVICES */
+.services{background:var(--s1);border-top:1px solid var(--border)}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.svc{background:var(--bg);padding:1.8rem;transition:background .2s;position:relative;overflow:hidden}
+.svc:hover{background:var(--s2)}
+.svc::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .3s}
+.svc:hover::before{height:100%}
+.svc-n{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.1em;margin-bottom:.5rem}
+.svc-title{font-size:1.1rem;font-weight:700;margin-bottom:.7rem}
+.svc-desc{font-size:.83rem;color:var(--muted);line-height:1.65;margin-bottom:1.2rem}
+.svc-icon{font-size:1.6rem;margin-bottom:1rem;display:block}
+.tag{display:inline-block;font-family:var(--fm);font-size:.6rem;padding:.22rem .6rem;border:1px solid;letter-spacing:.07em}
+.tg{border-color:var(--gold);color:var(--gold)}
+.tt{border-color:var(--teal);color:var(--teal)}
+.tc{border-color:var(--coral);color:var(--coral)}
+@media(min-width:600px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* LRDY */
+.lrdy{background:var(--bg);border-top:1px solid var(--border)}
+.lrdy-inner{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media(min-width:900px){.lrdy-inner{grid-template-columns:1fr 1.5fr}}
+
+/* SUNO EMBED */
+.suno-send:disabled{background:var(--border);color:var(--muted);cursor:not-allowed;transform:none}
+
+/* TUTEUR */
+.tuteur{background:var(--s1);border-top:1px solid var(--border)}
+.tuteur-card{border:1px solid var(--border);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:border-color .2s;background:var(--bg);text-decoration:none;color:inherit;display:block}
+.tuteur-card:hover{border-color:var(--teal)}
+.tuteur-top{display:flex;align-items:center;gap:1.2rem;margin-bottom:.5rem}
+.tuteur-badge{background:var(--teal);color:#000;font-family:var(--fm);font-size:.65rem;font-weight:500;padding:.4rem .8rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.tuteur-title{font-size:1.2rem;font-weight:700}
+.tuteur-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+.tuteur-features{display:flex;flex-wrap:wrap;gap:.5rem}
+.tf{font-family:var(--fm);font-size:.6rem;border:1px solid var(--border);color:var(--muted);padding:.2rem .5rem;letter-spacing:.06em}
+.tuteur-link{font-family:var(--fm);font-size:.7rem;color:var(--teal);margin-top:.5rem;display:block}
+
+/* BRANDS */
+.brands{border-top:1px solid var(--border)}
+.brand-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:2.5rem}
+.brand-card{border:1px solid var(--border);padding:1.3rem 1.5rem;display:flex;align-items:center;gap:1.2rem;transition:all .2s;text-decoration:none;color:inherit;background:var(--s1)}
+.brand-card:hover{border-color:var(--gold);transform:translateX(4px)}
+.b-badge{font-family:var(--fm);font-size:.65rem;font-weight:500;padding:.35rem .65rem;min-width:50px;text-align:center;flex-shrink:0;letter-spacing:.04em}
+.ba{background:var(--gold);color:#000}
+.bt{background:var(--teal);color:#000}
+.bc{background:var(--coral);color:#fff}
+.bd{background:var(--border);color:var(--text)}
+.brand-info h3{font-size:.95rem;font-weight:700;margin-bottom:.25rem}
+.brand-info p{font-size:.78rem;color:var(--muted);line-height:1.5}
+@media(min-width:600px){.brand-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* CTA */
+.cta{padding:5rem 1.5rem;text-align:center;border-top:1px solid var(--border);position:relative;overflow:hidden}
+.cta-ghost{position:absolute;font-size:clamp(4rem,14vw,9rem);font-weight:800;color:rgba(255,158,27,.06);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;letter-spacing:-.05em}
+.cta>*{position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:2rem;text-align:left}
+.contact-item{background:var(--s1);border:1px solid var(--border);padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s}
+.contact-item:hover{border-color:var(--gold)}
+.contact-icon{font-size:1.3rem;flex-shrink:0}
+.contact-label{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
+.contact-val{font-size:.88rem;font-weight:600}
+@media(min-width:600px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.contact-grid{grid-template-columns:repeat(4,1fr)};.cta{padding:6rem 3rem}}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:1.2rem}
+.f-logo{font-size:.9rem;font-weight:800;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+.f-links{display:flex;flex-wrap:wrap;gap:1rem}
+.f-links a{font-family:var(--fm);font-size:.62rem;color:var(--muted);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.f-links a:hover{color:var(--gold)}
+.f-copy{font-family:var(--fm);font-size:.6rem;color:var(--border)}
+@media(min-width:900px){footer{padding:2rem 3rem;flex-direction:row;justify-content:space-between;align-items:center}}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.rev.on{opacity:1;transform:translateY(0)}
+.rev2{opacity:0;transform:translateY(20px);transition:opacity .55s .15s ease,transform .55s .15s ease}
+.rev2.on{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">IA Facile<span>.bj</span></div>
+  <div class="nav-right">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#lrdy" class="nav-link">Musique</a>
+    <a href="#tuteur" class="nav-link">Tuteur</a>
+    <a href="#contact" class="nav-cta">Devis gratuit →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-visual">
+    <div class="hero-circle"></div>
+    <div class="hero-line" style="left:20%"></div>
+    <div class="hero-line" style="right:30%;opacity:.15"></div>
+  </div>
+  <div class="hero-tag">🌍 Cotonou, Bénin · Afrique de l'Ouest</div>
+  <h1 class="hero-title">Travaille plus<br>vite grâce à<br><span class="hl">l'IA.</span></h1>
+  <p class="hero-sub">Sites web, bots Telegram, formation et tuteur numérique — des outils concrets pour les entrepreneurs francophones d'Afrique de l'Ouest.</p>
+  <div class="hero-btns">
+    <a href="#services" class="btn-p">Voir les services</a>
+    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="btn-g">🤖 Bot Telegram gratuit</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-n">7+</div><div class="hstat-l">Sites livrés</div></div>
+    <div class="hstat"><div class="hstat-n">7K+</div><div class="hstat-l">Tracks LRDY</div></div>
+    <div class="hstat"><div class="hstat-n">24h</div><div class="hstat-l">Délai livraison</div></div>
+  </div>
+</header>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><b>✦</b>Sites Web Pro</div>
+    <div class="ticker-item"><b>✦</b>Bots Telegram IA · Dès 2 000 XOF</div>
+    <div class="ticker-item"><b>✦</b>Formation IA en Français</div>
+    <div class="ticker-item"><b>✦</b>Tuteur Numérique Bénin</div>
+    <div class="ticker-item"><b>✦</b>Musique IA — LRDY</div>
+    <div class="ticker-item"><b>✦</b>Zémi Vivant — Sécurité Routière</div>
+    <div class="ticker-item"><b>✦</b>Mobile Money · Livraison Rapide</div>
+    <div class="ticker-item"><b>✦</b>Sites Web Pro</div>
+    <div class="ticker-item"><b>✦</b>Bots Telegram IA · Dès 2 000 XOF</div>
+    <div class="ticker-item"><b>✦</b>Formation IA en Français</div>
+    <div class="ticker-item"><b>✦</b>Tuteur Numérique Bénin</div>
+    <div class="ticker-item"><b>✦</b>Musique IA — LRDY</div>
+    <div class="ticker-item"><b>✦</b>Zémi Vivant — Sécurité Routière</div>
+    <div class="ticker-item"><b>✦</b>Mobile Money · Livraison Rapide</div>
+  </div>
+</div>
+
+<section class="services sec" id="services">
+  <div class="rev">
+    <div class="sec-lbl">// Services</div>
+    <h2 class="sec-h">Concret. Rapide.<br>Résultats mesurables.</h2>
+    <p class="sec-d">Prix fixes, délais tenus, paiement Mobile Money. Zéro jargon, zéro surprise.</p>
+  </div>
+  <div class="svc-grid rev2">
+    <div class="svc">
+      <span class="svc-icon">🌐</span>
+      <div class="svc-n">01 — Priorité semaine</div>
+      <div class="svc-title">Création de Sites Web</div>
+      <p class="svc-desc">Vitrine, portfolio, immobilier, restaurant, mode, beauté, salon. Déployé sur Cloudflare — ultra rapide en Afrique. Livré en 48–72h.</p>
+      <span class="tag tg">À partir de 50 000 XOF</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🤖</span>
+      <div class="svc-n">02 — Bot Telegram</div>
+      <div class="svc-title">Bots Telegram IA</div>
+      <p class="svc-desc">On construit ton bot sur mesure : ventes automatiques, réponses clients, prise de commandes 24h/24. Teste le nôtre gratuitement maintenant.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem">
+        <span class="tag tt">Construction sur mesure</span>
+        <span class="tag tg">Livraison 24–48h</span>
+      </div>
+      <a href="https://t.me/maitreiabeninoisbot" target="_blank" style="font-family:var(--fm);font-size:.65rem;color:var(--teal);text-decoration:none;display:block;margin-bottom:.5rem">→ Tester @maitreiabeninoisbot</a>
+      <span class="tag tt">Dès 2 000 XOF</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🎵</span>
+      <div class="svc-n">03 — Studio IA</div>
+      <div class="svc-title">LRDY Prompt Studio</div>
+      <p class="svc-desc">Génère des prompts Suno AI optimisés pour n'importe quel genre musical — Afrobeat, Gospel Fon, NY Drill, Tango, Lo-Fi et 16 autres. Gratuit, instantané, zéro inscription.</p>
+      <a href="https://studio.iafacilebenin.com" target="_blank" style="font-family:var(--fm);font-size:.65rem;color:var(--teal);text-decoration:none;display:block;margin-bottom:.5rem">→ Ouvrir le Studio</a>
+      <span class="tag tt">Accès gratuit</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🎓</span>
+      <div class="svc-n">04 — Formation</div>
+      <div class="svc-title">IA Pratique en Français</div>
+      <p class="svc-desc">Apprends à utiliser l'IA pour créer du contenu, gagner du temps et automatiser tes tâches. Modules WhatsApp adaptés au rythme africain.</p>
+      <span class="tag tg">1 000 – 10 000 XOF</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">📚</span>
+      <div class="svc-n">05 — Éducation nationale</div>
+      <div class="svc-title">Tuteur Numérique Bénin</div>
+      <p class="svc-desc">Plateforme IA d'aide aux devoirs pour élèves CI–Terminale. Curriculum béninois officiel. Accès web immédiat, sans inscription.</p>
+      <span class="tag tt">Accès gratuit</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🦺</span>
+      <div class="svc-n">06 — Contenu institutionnel</div>
+      <div class="svc-title">Zémi Vivant — Sécurité Routière</div>
+      <p class="svc-desc">Série vidéo IA sur la sécurité routière au Bénin. Partenariats B2G : gouvernement, MCA-Bénin, NSIA et autres assureurs.</p>
+      <span class="tag tc">Partenariat institutionnel</span>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🎵</span>
+      <div class="svc-n">07 — Identité sonore</div>
+      <div class="svc-title">LRDY — Musique IA</div>
+      <p class="svc-desc">Production musicale IA avec éléments culturels Fon. Jingles publicitaires, bandes-son, identité sonore pour marques et événements.</p>
+      <span class="tag tt">Sur devis</span>
+    </div>
+  </div>
+</section>
+
+<section class="lrdy sec" id="lrdy">
+  <div class="rev">
+    <div class="sec-lbl">// LRDY Music × Suno AI</div>
+    <h2 class="sec-h">Crée ta musique<br>avec l'IA.</h2>
+    <p class="sec-d">Décris ta vibe, le studio génère instantanément un prompt Suno optimisé et l'ouvre directement dans Suno en un clic. 20 genres disponibles.</p>
+  </div>
+  <div class="rev2" style="display:grid;grid-template-columns:1fr;gap:1rem">
+    <div style="border:1px solid var(--border);padding:1.5rem;background:var(--s1);display:flex;flex-direction:column;gap:1rem">
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+        <span class="tag tt">Afrobeat Fon</span>
+        <span class="tag tg">Gospel Fongbè</span>
+        <span class="tag tt">NY Drill</span>
+        <span class="tag tg">Trap Cotonou</span>
+        <span class="tag tt">Tango</span>
+        <span class="tag tg">Lo-Fi</span>
+        <span class="tag tt">Vodoun</span>
+        <span class="tag tg">Cinematic</span>
+        <span class="tag tt">+ 12 genres</span>
+      </div>
+      <p style="font-size:.83rem;color:var(--muted);line-height:1.7">Zéro compte requis. Zéro API. Le prompt est généré localement et ouvre Suno directement avec ton idée pré-remplie.</p>
+      <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+        <a href="https://studio.iafacilebenin.com" target="_blank" class="btn-p">Ouvrir le Studio ↗</a>
+        <a href="https://suno.com" target="_blank" class="btn-g">Suno AI ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tuteur sec" id="tuteur">
+  <div class="rev">
+    <div class="sec-lbl">// Éducation Numérique</div>
+    <h2 class="sec-h">Tuteur IA<br>pour le Bénin.</h2>
+    <p class="sec-d">Plateforme nationale d'aide aux devoirs. Programme béninois officiel, CI jusqu'à la Terminale. Disponible maintenant.</p>
+  </div>
+  <div class="rev2">
+    <a href="https://maitreetude.pages.dev" target="_blank" class="tuteur-card">
+      <div class="tuteur-top">
+        <div class="tuteur-badge">🎓 LIVE</div>
+        <div class="tuteur-title">Maître Étude — Bénin</div>
+      </div>
+      <p class="tuteur-desc">Ton assistant scolaire IA disponible 24h/24. Explications en français, exercices corrigés, méthodes adaptées au programme béninois officiel. Mathématiques, Français, Sciences, Histoire-Géo et plus.</p>
+      <div class="tuteur-features">
+        <span class="tf">CI → Terminale</span>
+        <span class="tf">Programme béninois</span>
+        <span class="tf">Accès gratuit</span>
+        <span class="tf">Sans inscription</span>
+        <span class="tf">Mobile-first</span>
+        <span class="tf">Disponible 24h/24</span>
+      </div>
+      <span class="tuteur-link">maitreetude.pages.dev →</span>
+    </a>
+  </div>
+</section>
+
+<section class="brands sec" id="projets">
+  <div class="rev">
+    <div class="sec-lbl">// L'écosystème SHAP SHAP</div>
+    <h2 class="sec-h">Un empire.<br>Plusieurs fronts.</h2>
+    <p class="sec-d">Chaque projet est une unité autonome avec sa mission, son audience et son modèle de revenus.</p>
+  </div>
+  <div class="brand-grid rev2">
+    <a href="#services" class="brand-card">
+      <div class="b-badge ba">IA</div>
+      <div class="brand-info"><h3>IA Facile Bénin</h3><p>Hub principal — formation, bots, sites web pour entrepreneurs francophones.</p></div>
+    </a>
+    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="brand-card">
+      <div class="b-badge bt">🤖</div>
+      <div class="brand-info"><h3>Bot Telegram IA</h3><p>@maitreiabeninoisbot — assistant IA gratuit. Teste maintenant, upgrade quand tu veux.</p></div>
+    </a>
+    <a href="https://maitreetude.pages.dev" target="_blank" class="brand-card">
+      <div class="b-badge bt">📚</div>
+      <div class="brand-info"><h3>Maître Étude</h3><p>Tuteur IA national. Programme béninois CI–Terminale. En ligne maintenant.</p></div>
+    </a>
+    <a href="https://studio.iafacilebenin.com" target="_blank" class="brand-card">
+      <div class="b-badge bd">🎵</div>
+      <div class="brand-info"><h3>LRDY Prompt Studio</h3><p>20 genres musicaux. Prompt Suno optimisé en 1 clic. Afrobeat, Drill, Tango et plus.</p></div>
+    </a>
+    <a href="#services" class="brand-card">
+      <div class="b-badge bc">🦺</div>
+      <div class="brand-info"><h3>Zémi Vivant</h3><p>Sécurité routière par l'IA. B2G : gouvernement, MCA-Bénin, assureurs.</p></div>
+    </a>
+    <a href="#services" class="brand-card">
+      <div class="b-badge ba">🌐</div>
+      <div class="brand-info"><h3>Web Service</h3><p>Sites vitrines livrés en 48h. Immobilier, resto, mode, beauté. Cloudflare ultra-rapide.</p></div>
+    </a>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="cta-ghost">CONTACT</div>
+  <div class="sec-lbl">// Parlons-nous</div>
+  <h2 class="sec-h">Prêt à commencer ?</h2>
+  <p class="sec-d" style="margin:0 auto 2rem">Devis gratuit sous 24h. Paiement Mobile Money MTN ou Celtiis. Livraison rapide.</p>
+  <div class="contact-grid rev">
+    <a href="https://wa.me/22901510174" target="_blank" class="contact-item">
+      <span class="contact-icon">💬</span>
+      <div><div class="contact-label">WhatsApp Principal</div><div class="contact-val">+229 01 51 01 74</div></div>
+    </a>
+    <a href="tel:+22901404624" class="contact-item">
+      <span class="contact-icon">💰</span>
+      <div><div class="contact-label">Mobile Money (MTN / Celtiis)</div><div class="contact-val">+229 01 40 46 24</div></div>
+    </a>
+    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="contact-item">
+      <span class="contact-icon">🤖</span>
+      <div><div class="contact-label">Bot Telegram IA</div><div class="contact-val">@maitreiabeninoisbot</div></div>
+    </a>
+    <a href="mailto:contact@iafacilebenin.com" class="contact-item">
+      <span class="contact-icon">📧</span>
+      <div><div class="contact-label">Email</div><div class="contact-val">contact@iafacilebenin.com</div></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="f-logo">IA Facile Bénin</div>
+    <div class="f-copy">© 2026 SHAP SHAP SARL — RCCM RB/COT/21 B 31055 — Cotonou, Bénin</div>
+  </div>
+  <div class="f-links">
+    <a href="#services">Services</a>
+    <a href="#lrdy">LRDY</a>
+    <a href="#tuteur">Tuteur</a>
+    <a href="#projets">Projets</a>
+    <a href="https://t.me/maitreiabeninoisbot" target="_blank">Bot</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const ro = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target);} });
+},{threshold:.08});
+document.querySelectorAll('.rev,.rev2').forEach(el=>ro.observe(el));
+
+// Smooth anchors
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+// Suno Chat (Claude API)
+const SYSTEM=`Tu es LRDY Prompt Engine, un expert en prompt engineering pour Suno AI, spécialisé dans la musique africaine francophone : gospel en Fongbè, afrobeat béninois, coupé-décalé, musique traditionnelle Fon, et jingles publicitaires.
+
+Quand l'utilisateur décrit une idée musicale :
+1. Réponds en français (2-3 phrases max) pour expliquer ta démarche
+2. Génère un prompt Suno AI optimisé EN ANGLAIS (Suno performe mieux en anglais)
+3. Formate le prompt dans un bloc séparé commençant exactement par: [SUNO_PROMPT]
+4. Le prompt doit inclure : style tags entre crochets, description atmosphérique courte, BPM si pertinent
+
+Sois créatif, précis, et culturellement authentique. Évite les clichés.`;
+
+</script>
+</body>
+</html>
