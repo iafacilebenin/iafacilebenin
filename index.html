@@ -408,11 +408,19 @@ footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Scroll reveal
+// Scroll reveal — fire immediately for elements already in viewport
+const revEls = document.querySelectorAll('.rev,.rev2');
 const ro = new IntersectionObserver(e => {
   e.forEach(x => { if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target);} });
-},{threshold:.08});
-document.querySelectorAll('.rev,.rev2').forEach(el=>ro.observe(el));
+},{threshold:0.05, rootMargin:'0px 0px -20px 0px'});
+revEls.forEach(el => ro.observe(el));
+// Fallback: reveal anything already visible after 100ms
+setTimeout(() => {
+  revEls.forEach(el => {
+    const r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight) el.classList.add('on');
+  });
+}, 100);
 
 // Smooth anchors
 document.querySe
