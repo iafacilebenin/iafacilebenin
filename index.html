@@ -146,9 +146,11 @@ footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-
 @media(min-width:900px){footer{padding:2rem 3rem;flex-direction:row;justify-content:space-between;align-items:center}}
 
 /* REVEAL */
-.rev{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.rev{opacity:1;transform:translateY(0);transition:opacity .55s ease,transform .55s ease}
+.rev.off{opacity:0;transform:translateY(20px)}
 .rev.on{opacity:1;transform:translateY(0)}
-.rev2{opacity:0;transform:translateY(20px);transition:opacity .55s .15s ease,transform .55s .15s ease}
+.rev2{opacity:1;transform:translateY(0);transition:opacity .55s .15s ease,transform .55s .15s ease}
+.rev2.off{opacity:0;transform:translateY(20px)}
 .rev2.on{opacity:1;transform:translateY(0)}
 </style>
 </head>
@@ -324,8 +326,41 @@ footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-
         <span class="tf">Mobile-first</span>
         <span class="tf">Disponible 24h/24</span>
       </div>
-      <span class="tuteur-link">maitreetude.pages.dev →</span>
+      <span class="tuteur-link">→ Ouvrir le Tuteur ↗</span>
     </a>
+  </div>
+</section>
+
+<section class="sec" id="creation" style="background:var(--s2);border-top:1px solid var(--border)">
+  <div class="rev">
+    <div class="sec-lbl">// Création de Contenu IA</div>
+    <h2 class="sec-h">Génère des visuels<br>pro en 1 clic.</h2>
+    <p class="sec-d">Images IA haute qualité pour tes réseaux, produits, publicités et contenus. Powered by IA — résultats instantanés.</p>
+  </div>
+  <div class="rev2" style="display:grid;grid-template-columns:1fr;gap:1rem">
+    <div style="border:2px solid var(--gold);padding:2rem;background:var(--bg);position:relative;overflow:hidden">
+      <!-- Gold glow accent -->
+      <div style="position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,158,27,.12),transparent 70%);pointer-events:none"></div>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem">
+        <span style="font-size:1.8rem">🎨</span>
+        <div>
+          <div style="font-family:var(--fm);font-size:.58rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem">Accès Premium</div>
+          <div style="font-size:1.1rem;font-weight:700">Studio Création Visuelle</div>
+        </div>
+        <div style="margin-left:auto;background:var(--gold);color:#000;font-family:var(--fm);font-size:.6rem;font-weight:700;padding:.35rem .7rem;letter-spacing:.08em">BIENTÔT</div>
+      </div>
+      <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem">Génération d'images IA, visuels pour réseaux sociaux, affiches publicitaires, identité visuelle. Accès réservé aux membres — paiement Mobile Money, activation immédiate.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem">
+        <span class="tag tg">Images IA</span>
+        <span class="tag tg">Réseaux sociaux</span>
+        <span class="tag tg">Affiches & Pubs</span>
+        <span class="tag tc">Accès Payant</span>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:1.2rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
+        <a href="https://wa.me/2290151017042?text=Je%20veux%20acc%C3%A9der%20au%20Studio%20Cr%C3%A9ation%20Visuelle" target="_blank" class="btn-p" style="font-size:.7rem;padding:.7rem 1.3rem">💬 Rejoindre la liste d'attente</a>
+        <span style="font-family:var(--fm);font-size:.65rem;color:var(--muted)">Paiement Mobile Money · Accès instantané</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -352,9 +387,17 @@ footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-
       <div class="b-badge bd">🎵</div>
       <div class="brand-info"><h3>Studio Prompt Musical</h3><p>20 genres musicaux. Prompt Suno optimisé en 1 clic. Afrobeat, Drill, Tango et plus.</p></div>
     </a>
+    <a href="#creation" class="brand-card">
+      <div class="b-badge" style="background:var(--gold);color:#000">🎨</div>
+      <div class="brand-info"><h3>Studio Création Visuelle</h3><p>Images IA premium. Visuels pro pour réseaux & pubs. Accès membres — bientôt disponible.</p></div>
+    </a>
     <a href="#services" class="brand-card">
       <div class="b-badge bc">🦺</div>
       <div class="brand-info"><h3>Zémi Vivant</h3><p>Sécurité routière par l'IA. B2G : gouvernement, MCA-Bénin, assureurs.</p></div>
+    </a>
+    <a href="#tuteur" class="brand-card">
+      <div class="b-badge" style="background:var(--gold);color:#000">🎨</div>
+      <div class="brand-info"><h3>Contenu IA <span style="font-family:var(--fm);font-size:.58rem;background:var(--gold);color:#000;padding:.1rem .4rem;margin-left:.3rem;letter-spacing:.06em">PREMIUM</span></h3><p>Génération d'images & visuels IA. Accès sur paiement Mobile Money.</p></div>
     </a>
     <a href="#services" class="brand-card">
       <div class="b-badge ba">🌐</div>
@@ -408,19 +451,12 @@ footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Scroll reveal — fire immediately for elements already in viewport
+// Scroll reveal — content visible by default, animation on scroll is enhancement only
 const revEls = document.querySelectorAll('.rev,.rev2');
 const ro = new IntersectionObserver(e => {
   e.forEach(x => { if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target);} });
-},{threshold:0.05, rootMargin:'0px 0px -20px 0px'});
+},{threshold:0.05});
 revEls.forEach(el => ro.observe(el));
-// Fallback: reveal anything already visible after 100ms
-setTimeout(() => {
-  revEls.forEach(el => {
-    const r = el.getBoundingClientRect();
-    if(r.top < window.innerHeight) el.classList.add('on');
-  });
-}, 100);
 
 // Smooth anchors
 document.querySe
