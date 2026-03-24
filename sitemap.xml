@@ -1,76 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- HOMEPAGE — Empire Hub -->
-  <url>
-    <loc>https://iafacilebenin.com/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- SERVICE 1: Sites Web PME (PRIMARY revenue — push first) -->
-  <url>
-    <loc>https://iafacilebenin.com/sites</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- SERVICE 2: Prompt Pack / Formation IA -->
-  <url>
-    <loc>https://iafacilebenin.com/prompts</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SERVICE 3: Telegram Bot / Assistant IA -->
-  <url>
-    <loc>https://iafacilebenin.com/bot</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- SERVICE 4: Maître Étude — Exam Prep / Tutoring -->
-  <url>
-    <loc>https://iafacilebenin.com/maitreetude</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SERVICE 5: ZÉMI VIVANT — Road Safety B2G -->
-  <url>
-    <loc>https://iafacilebenin.com/zemivivant</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- SERVICE 6: LRDY Music -->
-  <url>
-    <loc>https://iafacilebenin.com/lrdy</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- SERVICE 7: Fon Acoustic Corpus / Research -->
-  <url>
-    <loc>https://iafacilebenin.com/fon</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- LEGAL / ABOUT -->
-  <url>
-    <loc>https://iafacilebenin.com/about</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-</urlset>
+iafacilebenin/                  ← your repo root
+├── index.html                  ← Homepage (your existing empire landing)
+├── sitemap.xml                 ← NEW (the file I gave you)
+├── robots.txt                  ← NEW (rename DOC_2026-03-25_robots.txt → robots.txt)
+├── favicon.svg                 ← Already there ✓
+├── og-image.png                ← Already there ✓
+│
+├── sites/
+│   └── index.html              ← The pricing page I just built (you're doing this now ✓)
+│
+├── prompts/
+│   └── index.html              ← Prompt pack page (build later)
+│
+├── bot/
+│   └── index.html              ← Telegram bot page (build later)
+│
+├── maitreetude/
+│   └── index.html              ← Exam prep page (build later)
+│
+├── zemivivant/
+│   └── index.html              ← Road safety B2G page (build later)
+│
+├── lrdy/
+│   └── index.html              ← Music page (build later)
+│
+├── fon/
+│   └── index.html              ← Corpus page (build later)
+│
+└── about/
+    └── index.html              ← About page (build later)
