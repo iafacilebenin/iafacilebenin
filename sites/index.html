@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sites Web Professionnels pour PME | IA Facile Bénin</title>
+<meta name="description" content="Votre site web professionnel à partir de 75 000 FCFA. Conçu pour les entreprises béninoises. Livraison en 7 jours. IA Facile Bénin.">
+<meta name="keywords" content="site web Bénin, création site internet Cotonou, PME Bénin, site professionnel Afrique">
+<meta name="author" content="IA Facile Bénin — SHAP SHAP SARL">
+<meta property="og:title" content="Sites Web Pro pour PME | IA Facile Bénin">
+<meta property="og:description" content="Votre site web professionnel à partir de 75 000 FCFA. Livraison 7 jours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iafacilebenin.com/sites">
+<meta property="og:locale" content="fr_BJ">
+<link rel="canonical" href="https://iafacilebenin.com/sites">
+
+<!-- Structured Data for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "IA Facile Bénin",
+  "description": "Services IA et web pour entreprises béninoises : création de sites web, formation IA, chatbots, sécurité routière, éducation",
+  "url": "https://iafacilebenin.com",
+  "telephone": "+2290151017042",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cotonou",
+    "addressCountry": "BJ"
+  },
+  "priceRange": "2000-300000 XOF",
+  "areaServed": "Bénin",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services IA Facile",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Sites Web Professionnels PME",
+        "url": "https://iafacilebenin.com/sites",
+        "priceSpecification": { "@type": "PriceSpecification", "price": "75000", "priceCurrency": "XOF" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Pack Prompts IA",
+        "url": "https://iafacilebenin.com/prompts",
+        "priceSpecification": { "@type": "PriceSpecification", "price": "2000", "priceCurrency": "XOF" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Assistant IA Telegram",
+        "url": "https://iafacilebenin.com/bot"
+      },
+      {
+        "@type": "Offer",
+        "name": "Maître Étude — Préparation Examens",
+        "url": "https://iafacilebenin.com/maitreetude"
+      },
+      {
+        "@type": "Offer",
+        "name": "ZÉMI VIVANT — Sécurité Routière",
+        "url": "https://iafacilebenin.com/zemivivant"
+      }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C8A44E;
+    --gold-light: #E8D5A0;
+    --gold-dark: #9A7B2F;
+    --deep: #0D1117;
+    --deep-mid: #161B22;
+    --surface: #1C2128;
+    --surface-hover: #252C35;
+    --text-primary: #F0F0F0;
+    --text-secondary: #8B949E;
+    --text-muted: #6E7681;
+    --green-accent: #2EA043;
+    --green-glow: rgba(46, 160, 67, 0.15);
+    --whatsapp: #25D366;
+    --whatsapp-dark: #1EBE57;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--deep);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* === GRAIN OVERLAY === */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* === HEADER / NAV === */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(200, 164, 78, 0.1);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-logo span { color: var(--text-secondary); font-weight: 400; font-size: 0.75rem; font-family: 'DM Sans', sans-serif; margin-left: 0.5rem; }
+
+  .nav-cta {
+    background: var(--whatsapp);
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .nav-cta:hover { background: var(--whatsapp-dark); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3); }
+
+  .wa-icon { width: 18px; height: 18px; }
+
+  /* === HERO === */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(200, 164, 78, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(200, 164, 78, 0.1);
+    border: 1px solid rgba(200, 164, 78, 0.2);
+    color: var(--gold);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease;
+  }
+
+  .hero-badge .dot { width: 6px; height: 6px; background: var(--green-accent); border-radius: 50%; animation: pulse 2s infinite; }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease 0.1s both;
+  }
+
+  .hero h1 .gold { color: var(--gold); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 0.75rem;
+    animation: fadeInUp 0.8s ease 0.2s both;
+  }
+
+  .hero-fon {
+    font-size: 0.95rem;
+    color: var(--gold-dark);
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 0.8s ease 0.3s both;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    animation: fadeInUp 0.8s ease 0.4s both;
+  }
+
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); }
+  .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+
+  /* === SECTION STYLES === */
+  section { padding: 5rem 2rem; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 550px;
+    margin: 0 auto 3.5rem;
+    font-size: 1rem;
+  }
+
+  /* === PRICING CARDS === */
+  .pricing-section {
+    background: linear-gradient(180deg, var(--deep) 0%, var(--deep-mid) 100%);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .pricing-card {
+    background: var(--surface);
+    border: 1px solid rgba(200, 164, 78, 0.08);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(200, 164, 78, 0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(165deg, var(--surface) 0%, rgba(200, 164, 78, 0.06) 100%);
+  }
+
+  .pricing-card.featured::before {
+    content: '⭐ LE PLUS CHOISI';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  .pack-name {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .pack-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .pack-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .price-currency { font-size: 0.9rem; color: var(--text-secondary); font-weight: 500; }
+  .price-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+  .pack-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pack-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .pack-features li::before {
+    content: '✓';
+    color: var(--green-accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .pack-features li.highlight { color: var(--text-primary); font-weight: 500; }
+
+  .pack-cta {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pack-cta.primary {
+    background: var(--whatsapp);
+    color: #fff;
+  }
+
+  .pack-cta.primary:hover {
+    background: var(--whatsapp-dark);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .pack-cta.secondary {
+    background: transparent;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+  }
+
+  .pack-cta.secondary:hover {
+    background: rgba(200, 164, 78, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .maintenance-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: var(--green-glow);
+    border: 1px solid rgba(46, 160, 67, 0.2);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--green-accent);
+    font-weight: 500;
+  }
+
+  /* === PROCESS SECTION === */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(200, 164, 78, 0.15);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 0.85rem; color: var(--text-secondary); }
+
+  /* === DEMO SECTION === */
+  .demo-section {
+    text-align: center;
+    background: var(--deep-mid);
+  }
+
+  .demo-frame {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(200, 164, 78, 0.15);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+    aspect-ratio: 16/9;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .demo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200, 164, 78, 0.05) 0%, transparent 50%);
+  }
+
+  .demo-placeholder {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    z-index: 1;
+  }
+
+  .demo-placeholder a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: gap 0.3s ease;
+  }
+
+  .demo-link:hover { gap: 0.8rem; }
+
+  /* === TRUST / SOCIAL PROOF === */
+  .trust-section { text-align: center; }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .trust-card {
+    background: var(--surface);
+    border: 1px solid rgba(200, 164, 78, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+
+  .trust-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+  .trust-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; }
+  .trust-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* === FAQ === */
+  .faq-section { max-width: 700px; margin: 0 auto; }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(200, 164, 78, 0.08);
+    padding: 1.5rem 0;
+  }
+
+  .faq-q {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q::after { content: '+'; color: var(--gold); font-size: 1.3rem; font-weight: 300; }
+  .faq-a { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+  /* === FINAL CTA === */
+  .final-cta {
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200, 164, 78, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .final-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .final-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .final-cta .big-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--whatsapp);
+    color: #fff;
+    padding: 1.1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .final-cta .big-cta:hover {
+    background: var(--whatsapp-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.3);
+  }
+
+  /* === FOOTER === */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(200, 164, 78, 0.06);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  footer a { color: var(--gold-dark); text-decoration: none; }
+
+  /* === ANIMATIONS === */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .nav { padding: 0.8rem 1.2rem; }
+    .nav-logo { font-size: 1.1rem; }
+    .nav-logo span { display: none; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    section { padding: 3.5rem 1.5rem; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .pricing-card.featured { order: -1; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .final-cta { padding: 4rem 1.5rem; }
+    .faq-section { padding: 3.5rem 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .process-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://iafacilebenin.com" class="nav-logo">IA Facile<span>Bénin</span></a>
+  <a href="https://wa.me/2290151017042?text=Bonjour%20!%20Je%20veux%20un%20site%20web%20professionnel." class="nav-cta">
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Discuter
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Disponible maintenant — Livraison 7 jours
+  </div>
+
+  <h1>Votre site web<br>professionnel à partir de<br><span class="gold">75 000 FCFA</span></h1>
+
+  <p class="hero-sub">Sites modernes, rapides et optimisés mobile pour les entreprises béninoises. Conçus avec l'intelligence artificielle. Livrés en une semaine.</p>
+
+  <p class="hero-fon">« Tɔ́n ɖò ɛntɛnɛ́ti jí » — Ayez votre propre place sur internet</p>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">7j</div>
+      <div class="stat-label">Livraison</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Mobile-first</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0 FCFA</div>
+      <div class="stat-label">Hébergement/an</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="offres">
+  <h2 class="section-title">Choisissez votre formule</h2>
+  <p class="section-sub">Trois offres claires. Pas de frais cachés. Votre site en ligne dans 7 jours.</p>
+
+  <div class="pricing-grid">
+
+    <!-- PACK DÉMARRAGE -->
+    <div class="pricing-card">
+      <div class="pack-name">Démarrage</div>
+      <div class="pack-title">Vitrine Essentielle</div>
+      <div class="pack-price">
+        <span class="price-amount">75 000</span>
+        <span class="price-currency">FCFA</span>
+      </div>
+      <p class="price-note">Paiement unique</p>
+      <ul class="pack-features">
+        <li class="highlight">1 page professionnelle complète</li>
+        <li>Design moderne et responsive mobile</li>
+        <li>Formulaire de contact WhatsApp</li>
+        <li>Hébergement gratuit inclus (Cloudflare)</li>
+        <li>Mise en ligne en 5 jours</li>
+        <li>1 révision incluse</li>
+      </ul>
+      <a href="https://wa.me/2290151017042?text=Bonjour%20!%20Je%20suis%20intéressé(e)%20par%20le%20Pack%20DÉMARRAGE%20à%2075%20000%20FCFA." class="pack-cta secondary">
+        💬 Je choisis Démarrage
+      </a>
+      <div class="maintenance-badge">+ Maintenance : 10 000 FCFA/mois (optionnel)</div>
+    </div>
+
+    <!-- PACK BUSINESS -->
+    <div class="pricing-card featured">
+      <div class="pack-name">Business</div>
+      <div class="pack-title">Présence Complète</div>
+      <div class="pack-price">
+        <span class="price-amount">150 000</span>
+        <span class="price-currency">FCFA</span>
+      </div>
+      <p class="price-note">Paiement unique</p>
+      <ul class="pack-features">
+        <li class="highlight">3 à 5 pages (Accueil, Services, À propos, Contact…)</li>
+        <li>Galerie photos / portfolio</li>
+        <li>Bouton WhatsApp flottant</li>
+        <li>Intégration Google Maps</li>
+        <li>SEO de base (référencement Google)</li>
+        <li>Hébergement gratuit inclus</li>
+        <li>Livraison en 7 jours</li>
+        <li>3 révisions incluses</li>
+      </ul>
+      <a href="https://wa.me/2290151017042?text=Bonjour%20!%20Je%20suis%20intéressé(e)%20par%20le%20Pack%20BUSINESS%20à%20150%20000%20FCFA." class="pack-cta primary">
+        💬 Je choisis Business
+      </a>
+      <div class="maintenance-badge">+ Maintenance : 15 000 FCFA/mois (optionnel)</div>
+    </div>
+
+    <!-- PACK PREMIUM -->
+    <div class="pricing-card">
+      <div class="pack-name">Premium</div>
+      <div class="pack-title">Identité Digitale</div>
+      <div class="pack-price">
+        <span class="price-amount">300 000</span>
+        <span class="price-currency">FCFA</span>
+      </div>
+      <p class="price-note">Paiement unique</p>
+      <ul class="pack-features">
+        <li class="highlight">Site complet sur mesure (5-10 pages)</li>
+        <li>Nom de domaine .com offert (1 an)</li>
+        <li>Animations et effets visuels premium</li>
+        <li>Modèle 3D / visite virtuelle (si applicable)</li>
+        <li>SEO avancé + Google Search Console</li>
+        <li>Email professionnel configuré</li>
+        <li>Hébergement gratuit inclus</li>
+        <li>Livraison en 7-10 jours</li>
+        <li>Révisions illimitées (30 jours)</li>
+      </ul>
+      <a href="https://wa.me/2290151017042?text=Bonjour%20!%20Je%20suis%20intéressé(e)%20par%20le%20Pack%20PREMIUM%20à%20300%20000%20FCFA." class="pack-cta secondary">
+        💬 Je choisis Premium
+      </a>
+      <div class="maintenance-badge">+ Maintenance : 25 000 FCFA/mois (optionnel)</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <h2 class="section-title">Comment ça marche ?</h2>
+  <p class="section-sub">4 étapes simples. De votre idée à votre site en ligne.</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Discutons</div>
+      <div class="step-desc">Envoyez-nous un message WhatsApp. Décrivez votre activité et ce que vous voulez.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Maquette</div>
+      <div class="step-desc">On crée une première version de votre site en 48h. Vous validez ou on ajuste.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Production</div>
+      <div class="step-desc">Développement complet avec l'IA. Design professionnel, rapide, mobile-first.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">En ligne !</div>
+      <div class="step-desc">Votre site est live. On configure l'hébergement et vous recevez les accès.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section class="demo-section">
+  <h2 class="section-title">Voyez la qualité</h2>
+  <p class="section-sub">Un exemple de site réalisé avec notre méthode IA.</p>
+
+  <div class="demo-frame">
+    <div class="demo-placeholder">
+      🏠 <a href="https://mahugnondinnew.pages.dev" target="_blank" rel="noopener">Voir le site démo : Villa de luxe avec modèle 3D</a>
+    </div>
+  </div>
+  <a href="https://mahugnondinnew.pages.dev" target="_blank" rel="noopener" class="demo-link">
+    Visiter le site démo →
+  </a>
+</section>
+
+<!-- TRUST -->
+<section class="trust-section">
+  <h2 class="section-title">Pourquoi IA Facile ?</h2>
+  <p class="section-sub">Ce qui nous différencie des agences web traditionnelles.</p>
+
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">⚡</div>
+      <div class="trust-title">Rapide — IA-powered</div>
+      <div class="trust-desc">L'intelligence artificielle accélère le design et le développement. Résultat : votre site en 7 jours, pas 7 semaines.</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">💰</div>
+      <div class="trust-title">Prix juste, pas de surprise</div>
+      <div class="trust-desc">Prix fixe affiché. Pas de "supplément" à la livraison. Vous payez ce que vous voyez.</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">🇧🇯</div>
+      <div class="trust-title">Fait au Bénin, pour le Bénin</div>
+      <div class="trust-desc">On connaît vos clients, votre marché, vos habitudes. Bouton WhatsApp, pas chatbot américain.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="faq-section">
+    <h2 class="section-title" style="margin-bottom: 2.5rem;">Questions fréquentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Est-ce que je dois payer l'hébergement chaque année ?</div>
+      <div class="faq-a">Non. L'hébergement est gratuit grâce à Cloudflare Pages. Vous ne payez que la création du site. Le seul coût récurrent optionnel est le nom de domaine (~6 000 FCFA/an) si vous en voulez un personnalisé.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Mon site sera-t-il visible sur Google ?</div>
+      <div class="faq-a">Oui. Tous nos sites sont optimisés pour le référencement (SEO). Le Pack Business et Premium incluent la configuration Google Search Console pour que votre site apparaisse dans les résultats de recherche.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Je n'ai pas de logo ni de photos, c'est un problème ?</div>
+      <div class="faq-a">Pas du tout. Avec l'IA, on peut générer des visuels professionnels adaptés à votre activité. On s'occupe de tout.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Comment je paie ?</div>
+      <div class="faq-a">Paiement par Mobile Money (MTN MoMo,Celtiis) ou virement. 50% à la commande, 50% à la livraison.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Et si je veux modifier mon site après ?</div>
+      <div class="faq-a">Les modifications mineures sont incluses dans la période de révision. Pour un suivi continu, notre maintenance mensuelle (10K-25K FCFA/mois) vous couvre avec mises à jour, modifications et support WhatsApp prioritaire.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Prêt à avoir <span style="color: var(--gold)">votre site</span> ?</h2>
+  <p>Envoyez-nous un message. On vous répond en moins de 2 heures.</p>
+  <a href="https://wa.me/2290151017042?text=Bonjour%20!%20Je%20veux%20créer%20mon%20site%20web%20professionnel%20avec%20IA%20Facile." class="big-cta">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Créer mon site maintenant
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-dark); margin-bottom: 0.75rem;">Nos Services</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; font-size: 0.8rem;">
+      <a href="/sites" style="color: var(--text-secondary); text-decoration: none;">Sites Web PME</a>
+      <a href="/prompts" style="color: var(--text-secondary); text-decoration: none;">Pack Prompts IA</a>
+      <a href="/bot" style="color: var(--text-secondary); text-decoration: none;">Assistant Telegram</a>
+      <a href="/maitreetude" style="color: var(--text-secondary); text-decoration: none;">Maître Étude</a>
+      <a href="/zemivivant" style="color: var(--text-secondary); text-decoration: none;">ZÉMI VIVANT</a>
+      <a href="/lrdy" style="color: var(--text-secondary); text-decoration: none;">LRDY Music</a>
+      <a href="/fon" style="color: var(--text-secondary); text-decoration: none;">Corpus Fongbè</a>
+      <a href="/about" style="color: var(--text-secondary); text-decoration: none;">À propos</a>
+    </div>
+  </div>
+  <p>© 2026 <a href="https://iafacilebenin.com">IA Facile Bénin</a> — SHAP SHAP SARL | RCCM: RB/COT/21 B 31055 | Cotonou, Bénin</p>
+  <p style="margin-top: 0.5rem;">lrdy@iafacilebenin.com</p>
+</footer>
+
+</body>
+</html>
