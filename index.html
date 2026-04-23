@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IA Facile Bénin — L'Intelligence Artificielle au service de l'Afrique</title>
-<meta name="description" content="Formation IA, bots Telegram, création de sites web et tuteur numérique pour entrepreneurs francophones d'Afrique de l'Ouest.">
-<meta property="og:title" content="IA Facile Bénin — L'IA pour l'Afrique">
-<meta property="og:description" content="Sites web, bots Telegram, formation IA et tuteur numérique pour entrepreneurs d'Afrique de l'Ouest.">
+<title>IA Facile Bénin — La Maison IA</title>
+<meta name="description" content="La maison où se bâtit l'IA béninoise. Atelier à Cotonou, pépinière d'apprentissage, recherche Fɔngbè, produits en service.">
+<meta property="og:title" content="IA Facile Bénin — La Maison IA">
+<meta property="og:description" content="La maison où se bâtit l'IA béninoise. De la découverte à la maîtrise.">
 <meta property="og:image" content="https://iafacilebenin.com/og-image.png">
 <meta property="og:url" content="https://iafacilebenin.com">
 <meta property="og:type" content="website">
@@ -17,446 +17,607 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FDFAF5;--s1:#F5F0E8;--s2:#EDE6D8;--border:#D8CEBC;--gold:#FF9E1B;--teal:#009970;--coral:#E8204A;--text:#1A1408;--muted:#7A6A50;--fh:'Syne',sans-serif;--fm:'DM Mono',monospace}
+/* IA FACILE BÉNIN v6 — La Maison IA · Atelier · Pépinière */
+:root{
+  --bg:#FDFAF5;--s1:#F5F0E8;--s2:#EDE6D8;--border:#D8CEBC;
+  --gold:#FF9E1B;--teal:#009970;--coral:#E8204A;
+  --text:#1A1408;--muted:#7A6A50;
+  --fh:'Syne',sans-serif;--fm:'DM Mono',monospace;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--fh);overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--fh);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:'';position:fixed;inset:0;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.02'/%3E%3C/svg%3E");pointer-events:none}
-body::after{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 700px 500px at 90% 0%,rgba(255,158,27,.12) 0%,transparent 60%),radial-gradient(ellipse 500px 400px at 0% 100%,rgba(0,153,112,.07) 0%,transparent 60%);pointer-events:none}
+body::after{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 700px 500px at 90% 0%,rgba(255,158,27,.10) 0%,transparent 60%),radial-gradient(ellipse 500px 400px at 0% 100%,rgba(0,153,112,.06) 0%,transparent 60%);pointer-events:none}
 section,header,nav,footer{position:relative;z-index:1}
 
 /* NAV */
-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border);backdrop-filter:blur(16px);background:rgba(253,250,245,.92);position:sticky;top:0;z-index:100}
-.logo{font-size:1.05rem;font-weight:800;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
-.logo span{color:var(--text);opacity:.5}
-.nav-right{display:flex;gap:.6rem;align-items:center}
-.nav-link{font-family:var(--fm);font-size:.65rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;display:none}
-.nav-link:hover{color:var(--text)}
-.nav-cta{background:var(--gold);color:#000;font-family:var(--fm);font-size:.68rem;font-weight:500;padding:.5rem 1rem;border:none;cursor:pointer;text-decoration:none;letter-spacing:.05em;transition:all .2s}
-.nav-cta:hover{background:#fff;transform:translateY(-1px)}
-@media(min-width:700px){.nav-link{display:inline}}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:48px;border-bottom:1px solid var(--border);backdrop-filter:blur(20px) saturate(180%);background:rgba(253,250,245,.82);position:sticky;top:0;z-index:100}
+.nav-logo{font-family:var(--fh);font-size:.95rem;font-weight:800;color:var(--text);letter-spacing:.02em;text-decoration:none;display:flex;align-items:center;gap:.35rem;flex-shrink:0}
+.nav-logo .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block}
+.nav-logo .tld{color:var(--muted);font-weight:500;font-size:.78rem}
+.nav-center{display:none;align-items:center;gap:1.6rem;flex:1;justify-content:center}
+.nav-center a{font-family:var(--fm);font-size:.72rem;color:var(--muted);text-decoration:none;letter-spacing:.02em;transition:color .2s;padding:.25rem 0;white-space:nowrap}
+.nav-center a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.nav-icon{color:var(--muted);width:18px;height:18px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:color .2s}
+.nav-icon:hover{color:var(--text)}
+.nav-icon svg{width:16px;height:16px}
+.nav-mobile-cta{font-family:var(--fm);font-size:.68rem;color:var(--text);text-decoration:none;letter-spacing:.04em;border:1px solid var(--border);padding:.35rem .7rem;border-radius:999px;transition:all .2s}
+.nav-mobile-cta:hover{border-color:var(--text);background:var(--s1)}
+@media(min-width:900px){.nav-center{display:flex}.nav-mobile-cta{display:none}}
 
-/* HERO */
-.hero{min-height:94vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 1.5rem 4rem;position:relative;overflow:hidden}
-.hero-visual{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-circle{position:absolute;border-radius:50%;background:conic-gradient(from 180deg,rgba(255,158,27,.2),rgba(0,153,112,.08),transparent 60%);width:700px;height:700px;top:-200px;right:-200px;animation:spin 20s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero-line{position:absolute;width:1px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);height:60%;top:20%;opacity:.3}
-.hero-tag{font-family:var(--fm);font-size:.62rem;color:var(--teal);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:up .5s .1s ease forwards}
-.hero-title{font-size:clamp(2.8rem,9vw,6rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:1.5rem;opacity:0;animation:up .6s .2s ease forwards}
+/* HERO — CENTERED */
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 1.5rem;position:relative;overflow:hidden}
+.hero-visual{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.hero-circle{position:absolute;border-radius:50%;background:conic-gradient(from 180deg,rgba(255,158,27,.22),rgba(0,153,112,.08),transparent 60%);width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 28s linear infinite;filter:blur(2px);opacity:.7}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero-line{position:absolute;width:1px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);height:60%;top:20%;opacity:.18}
+.hero-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:900px;margin:0 auto}
+.hero-tag{font-family:var(--fm);font-size:.62rem;color:var(--teal);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:up .5s .1s ease forwards;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.hero-tag::before{content:'';width:7px;height:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 4px rgba(0,153,112,.15);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(0,153,112,.15)}50%{box-shadow:0 0 0 7px rgba(0,153,112,.06)}}
+.hero-title{font-size:clamp(2.8rem,9vw,6.4rem);font-weight:800;line-height:.98;letter-spacing:-.035em;margin-bottom:.7rem;opacity:0;animation:up .6s .2s ease forwards}
 .hero-title .hl{color:var(--gold)}
-.hero-sub{font-size:.95rem;color:var(--muted);max-width:440px;line-height:1.75;margin-bottom:2.5rem;opacity:0;animation:up .6s .3s ease forwards}
-.hero-btns{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;animation:up .6s .4s ease forwards}
-.btn-p{background:var(--gold);color:#000;font-family:var(--fm);font-size:.75rem;font-weight:500;padding:.85rem 1.6rem;text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em}
-.btn-p:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,160,32,.2)}
-.btn-g{background:transparent;color:var(--text);font-family:var(--fm);font-size:.75rem;padding:.85rem 1.6rem;border:1px solid var(--border);text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em}
-.btn-g:hover{border-color:var(--teal);color:var(--teal)}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;opacity:0;animation:up .6s .5s ease forwards}
-.hstat{border-left:2px solid var(--border);padding-left:1rem}
-.hstat-n{font-size:1.5rem;font-weight:800;color:var(--gold)}
-.hstat-l{font-family:var(--fm);font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.hero-translation{font-family:var(--fh);font-size:clamp(1.15rem,3vw,1.6rem);font-weight:600;color:var(--text);letter-spacing:-.01em;margin-bottom:1.5rem;opacity:0;animation:up .6s .25s ease forwards}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.7;margin:0 auto 2.5rem;opacity:0;animation:up .6s .3s ease forwards}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;animation:up .6s .4s ease forwards;justify-content:center}
+.btn-p{background:var(--text);color:var(--bg);font-family:var(--fm);font-size:.74rem;font-weight:500;padding:.95rem 1.7rem;text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em;border-radius:999px}
+.btn-p:hover{background:var(--gold);color:#000;transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,158,27,.25)}
+.btn-g{background:transparent;color:var(--text);font-family:var(--fm);font-size:.74rem;padding:.95rem 1.7rem;border:1px solid var(--border);text-decoration:none;display:inline-block;transition:all .2s;letter-spacing:.04em;border-radius:999px}
+.btn-g:hover{border-color:var(--text);background:var(--s1)}
 @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
-/* TICKER */
-.ticker-wrap{overflow:hidden;padding:.65rem 0;background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.ticker{display:flex;gap:2.5rem;animation:tick 26s linear infinite;white-space:nowrap}
-.ticker-item{font-family:var(--fm);font-size:.65rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
-.ticker-item b{color:var(--gold);margin-right:.4rem}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* FEATURE */
+.feature{padding:5rem 1.5rem;border-top:1px solid var(--border);position:relative;overflow:hidden}
+.feature-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+.feature-txt .eyebrow{font-family:var(--fm);font-size:.6rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+.feature-txt .eyebrow::before{content:'';width:8px;height:8px;background:var(--teal);border-radius:50%;display:inline-block;box-shadow:0 0 0 4px rgba(0,153,112,.18);animation:pulse 2s ease-in-out infinite}
+.feature-txt h2{font-size:clamp(2rem,5.4vw,3.4rem);font-weight:800;line-height:1;letter-spacing:-.025em;margin-bottom:1rem}
+.feature-txt .sub{font-size:.98rem;color:var(--muted);line-height:1.7;margin-bottom:1.8rem;max-width:460px}
+.feature-txt .btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.feature-visual{aspect-ratio:4/3;border-radius:22px;overflow:hidden;position:relative;background:var(--s1);box-shadow:0 30px 60px -20px rgba(26,20,8,.18),0 0 0 1px var(--border)}
+.feature.alt{background:var(--s1)}
+.feature.alt .feature-visual{background:var(--bg)}
+@media(min-width:900px){.feature-inner{grid-template-columns:1fr 1fr;gap:5rem}.feature{padding:7rem 3rem}.feature.reverse .feature-txt{order:2}}
 
-/* SECTION */
-.sec{padding:5rem 1.5rem}
-.sec-lbl{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
-.sec-h{font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:.9rem}
-.sec-d{color:var(--muted);font-size:.9rem;line-height:1.75;max-width:480px;margin-bottom:2.5rem}
-@media(min-width:900px){.sec{padding:6rem 3rem}}
+/* PÉPINIÈRE — 4-step journey */
+.pepinière{padding:5rem 1.5rem;border-top:1px solid var(--border);background:var(--bg);position:relative;overflow:hidden}
+.pepinière-head{max-width:1200px;margin:0 auto 3.5rem;text-align:center}
+.pepinière-head .eyebrow{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.9rem}
+.pepinière-head h2{font-size:clamp(1.8rem,5.5vw,3.2rem);font-weight:800;line-height:1.02;letter-spacing:-.025em;margin-bottom:1rem}
+.pepinière-head p{color:var(--muted);font-size:.98rem;line-height:1.7;max-width:560px;margin:0 auto}
+.pepinière-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1rem;position:relative}
+.pep-step{
+  background:var(--text);color:var(--bg);
+  border-radius:22px;padding:2rem 1.8rem;
+  display:flex;flex-direction:column;gap:1rem;
+  text-decoration:none;transition:all .3s ease;
+  position:relative;overflow:hidden;min-height:280px;
+}
+.pep-step:hover{transform:translateY(-4px);box-shadow:0 22px 40px rgba(26,20,8,.22)}
+.pep-step::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(255,158,27,.18),transparent 60%);opacity:0;transition:opacity .3s}
+.pep-step:hover::before{opacity:1}
+.pep-n{font-family:var(--fh);font-size:3.6rem;font-weight:800;color:var(--gold);letter-spacing:-.04em;line-height:1;position:relative;z-index:1}
+.pep-eyebrow{font-family:var(--fm);font-size:.58rem;color:rgba(253,250,245,.6);letter-spacing:.15em;text-transform:uppercase;position:relative;z-index:1}
+.pep-title{font-family:var(--fh);font-size:1.15rem;font-weight:700;letter-spacing:-.01em;position:relative;z-index:1}
+.pep-desc{font-size:.84rem;color:rgba(253,250,245,.7);line-height:1.6;flex:1;position:relative;z-index:1}
+.pep-link{font-family:var(--fm);font-size:.65rem;color:var(--gold);letter-spacing:.06em;margin-top:auto;display:flex;align-items:center;gap:.4rem;position:relative;z-index:1}
+.pep-link .arrow{transition:transform .2s}
+.pep-step:hover .pep-link .arrow{transform:translateX(4px)}
+@media(min-width:700px){.pepinière-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.pepinière-grid{grid-template-columns:repeat(4,1fr)}}
 
-/* SERVICES */
-.services{background:var(--s1);border-top:1px solid var(--border)}
-.svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.svc{background:var(--bg);padding:1.8rem;transition:background .2s;position:relative;overflow:hidden}
-.svc:hover{background:var(--s2)}
-.svc::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .3s}
-.svc:hover::before{height:100%}
-.svc-n{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.1em;margin-bottom:.5rem}
-.svc-title{font-size:1.1rem;font-weight:700;margin-bottom:.7rem}
-.svc-desc{font-size:.83rem;color:var(--muted);line-height:1.65;margin-bottom:1.2rem}
-.svc-icon{font-size:1.6rem;margin-bottom:1rem;display:block}
-.tag{display:inline-block;font-family:var(--fm);font-size:.6rem;padding:.22rem .6rem;border:1px solid;letter-spacing:.07em}
-.tg{border-color:var(--gold);color:var(--gold)}
-.tt{border-color:var(--teal);color:var(--teal)}
-.tc{border-color:var(--coral);color:var(--coral)}
-@media(min-width:600px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:900px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+/* TILES */
+.tiles{padding:5rem 1.5rem;border-top:1px solid var(--border);background:var(--s1)}
+.tiles-head{max-width:1200px;margin:0 auto 3rem}
+.tiles-head .eyebrow{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.tiles-head h2{font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.9rem}
+.tiles-head p{color:var(--muted);font-size:.92rem;line-height:1.7;max-width:500px}
+.tile-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1rem}
+.tile{background:var(--bg);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:all .25s ease;text-decoration:none;color:inherit;display:flex;flex-direction:column;min-height:420px;position:relative}
+.tile:hover{border-color:var(--text);transform:translateY(-4px);box-shadow:0 22px 40px rgba(26,20,8,.10)}
+.tile-visual{aspect-ratio:16/10;background:var(--s1);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.tile.dark .tile-visual{background:var(--text)}
+.tile-body{padding:1.6rem 1.8rem 1.8rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.tile-n{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.tile-title{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+.tile-desc{font-size:.85rem;color:var(--muted);line-height:1.6;flex:1}
+.tile-link{font-family:var(--fm);font-size:.66rem;color:var(--text);text-decoration:none;letter-spacing:.05em;margin-top:.6rem;display:flex;align-items:center;gap:.4rem}
+.tile-link .arrow{transition:transform .2s}
+.tile:hover .tile-link .arrow{transform:translateX(4px)}
+@media(min-width:700px){.tile-grid{grid-template-columns:repeat(2,1fr)}}
 
-/* LRDY */
-.lrdy{background:var(--bg);border-top:1px solid var(--border)}
-.lrdy-inner{display:grid;grid-template-columns:1fr;gap:2.5rem}
-@media(min-width:900px){.lrdy-inner{grid-template-columns:1fr 1.5fr}}
+/* B2G */
+.b2g{padding:3rem 1.5rem;border-top:1px solid var(--border);background:var(--text);color:var(--bg)}
+.b2g-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start}
+.b2g .eyebrow{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase}
+.b2g h3{font-size:clamp(1.3rem,3.5vw,2rem);font-weight:800;line-height:1.15;letter-spacing:-.02em;max-width:720px}
+.b2g a{color:var(--gold);text-decoration:none;font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;border-bottom:1px solid rgba(255,158,27,.3);padding-bottom:.2rem;transition:border-color .2s;white-space:nowrap}
+.b2g a:hover{border-color:var(--gold)}
+@media(min-width:800px){.b2g-inner{flex-direction:row;justify-content:space-between;align-items:center}.b2g{padding:3.5rem 3rem}}
 
-/* SUNO EMBED */
-.suno-send:disabled{background:var(--border);color:var(--muted);cursor:not-allowed;transform:none}
-
-/* TUTEUR */
-.tuteur{background:var(--s1);border-top:1px solid var(--border)}
-.tuteur-card{border:1px solid var(--border);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:border-color .2s;background:var(--bg);text-decoration:none;color:inherit;display:block}
-.tuteur-card:hover{border-color:var(--teal)}
-.tuteur-top{display:flex;align-items:center;gap:1.2rem;margin-bottom:.5rem}
-.tuteur-badge{background:var(--teal);color:#000;font-family:var(--fm);font-size:.65rem;font-weight:500;padding:.4rem .8rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.tuteur-title{font-size:1.2rem;font-weight:700}
-.tuteur-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
-.tuteur-features{display:flex;flex-wrap:wrap;gap:.5rem}
-.tf{font-family:var(--fm);font-size:.6rem;border:1px solid var(--border);color:var(--muted);padding:.2rem .5rem;letter-spacing:.06em}
-.tuteur-link{font-family:var(--fm);font-size:.7rem;color:var(--teal);margin-top:.5rem;display:block}
-
-/* BRANDS */
-.brands{border-top:1px solid var(--border)}
-.brand-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:2.5rem}
-.brand-card{border:1px solid var(--border);padding:1.3rem 1.5rem;display:flex;align-items:center;gap:1.2rem;transition:all .2s;text-decoration:none;color:inherit;background:var(--s1)}
-.brand-card:hover{border-color:var(--gold);transform:translateX(4px)}
-.b-badge{font-family:var(--fm);font-size:.65rem;font-weight:500;padding:.35rem .65rem;min-width:50px;text-align:center;flex-shrink:0;letter-spacing:.04em}
-.ba{background:var(--gold);color:#000}
-.bt{background:var(--teal);color:#000}
-.bc{background:var(--coral);color:#fff}
-.bd{background:var(--border);color:var(--text)}
-.brand-info h3{font-size:.95rem;font-weight:700;margin-bottom:.25rem}
-.brand-info p{font-size:.78rem;color:var(--muted);line-height:1.5}
-@media(min-width:600px){.brand-grid{grid-template-columns:repeat(2,1fr)}}
-
-/* CTA */
-.cta{padding:5rem 1.5rem;text-align:center;border-top:1px solid var(--border);position:relative;overflow:hidden}
-.cta-ghost{position:absolute;font-size:clamp(4rem,14vw,9rem);font-weight:800;color:rgba(255,158,27,.06);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;letter-spacing:-.05em}
-.cta>*{position:relative;z-index:1}
-.contact-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:2rem;text-align:left}
-.contact-item{background:var(--s1);border:1px solid var(--border);padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s}
-.contact-item:hover{border-color:var(--gold)}
-.contact-icon{font-size:1.3rem;flex-shrink:0}
-.contact-label{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
-.contact-val{font-size:.88rem;font-weight:600}
-@media(min-width:600px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:900px){.contact-grid{grid-template-columns:repeat(4,1fr)};.cta{padding:6rem 3rem}}
+/* CONTACT */
+.contact{padding:5rem 1.5rem;border-top:1px solid var(--border);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:'MAISON';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(5rem,16vw,12rem);font-weight:800;color:rgba(255,158,27,.05);white-space:nowrap;letter-spacing:-.05em;pointer-events:none}
+.contact-inner{position:relative;max-width:640px;margin:0 auto}
+.contact .eyebrow{font-family:var(--fm);font-size:.6rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.contact h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem}
+.contact p{color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:2.2rem}
+.contact-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
 /* FOOTER */
-footer{border-top:1px solid var(--border);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:1.2rem}
-.f-logo{font-size:.9rem;font-weight:800;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
-.f-links{display:flex;flex-wrap:wrap;gap:1rem}
-.f-links a{font-family:var(--fm);font-size:.62rem;color:var(--muted);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
-.f-links a:hover{color:var(--gold)}
-.f-copy{font-family:var(--fm);font-size:.6rem;color:var(--border)}
-@media(min-width:900px){footer{padding:2rem 3rem;flex-direction:row;justify-content:space-between;align-items:center}}
+footer{border-top:1px solid var(--border);padding:2.5rem 1.5rem;background:var(--s1);display:flex;flex-direction:column;gap:1.5rem}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:1200px;margin:0 auto;width:100%}
+.foot-col h4{font-family:var(--fm);font-size:.58rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.8rem}
+.foot-col a{display:block;font-family:var(--fm);font-size:.72rem;color:var(--text);text-decoration:none;letter-spacing:.04em;padding:.25rem 0;transition:color .2s}
+.foot-col a:hover{color:var(--gold)}
+.foot-intro{font-family:var(--fm);font-size:.72rem;color:var(--muted);line-height:1.7;max-width:280px}
+.foot-legal{font-family:var(--fm);font-size:.62rem;color:var(--muted);line-height:1.7;max-width:1200px;margin:0 auto;width:100%;border-top:1px solid var(--border);padding-top:1.5rem;display:flex;flex-direction:column;gap:.3rem}
+.foot-legal b{color:var(--text);font-weight:600}
+@media(min-width:800px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}footer{padding:3rem}.foot-legal{flex-direction:row;justify-content:space-between;align-items:center;gap:1rem}}
 
-/* REVEAL */
-.rev{opacity:1;transform:translateY(0);transition:opacity .55s ease,transform .55s ease}
-.rev.off{opacity:0;transform:translateY(20px)}
+.rev{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease}
+.rev.off{opacity:0;transform:translateY(22px)}
 .rev.on{opacity:1;transform:translateY(0)}
-.rev2{opacity:1;transform:translateY(0);transition:opacity .55s .15s ease,transform .55s .15s ease}
-.rev2.off{opacity:0;transform:translateY(20px)}
-.rev2.on{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo">IA Facile<span>.bj</span></div>
+  <a href="#" class="nav-logo"><span class="dot"></span>IA Facile<span class="tld">.bj</span></a>
+  <div class="nav-center">
+    <a href="#tuteur">Maître Étude</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#pepiniere">Pépinière</a>
+    <a href="#recherche">Recherche</a>
+    <a href="#b2g">Partenariats</a>
+    <a href="#contact">Contact</a>
+  </div>
   <div class="nav-right">
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#lrdy" class="nav-link">Studio</a>
-    <a href="#tuteur" class="nav-link">Tuteur</a>
-    <a href="#contact" class="nav-cta">Devis gratuit →</a>
+    <a href="#contact" class="nav-icon" aria-label="Contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg>
+    </a>
+    <a href="#contact" class="nav-mobile-cta">Contact →</a>
   </div>
 </nav>
 
+<!-- HERO — MAISON IA -->
 <header class="hero">
   <div class="hero-visual">
     <div class="hero-circle"></div>
-    <div class="hero-line" style="left:20%"></div>
-    <div class="hero-line" style="right:30%;opacity:.15"></div>
+    <div class="hero-line" style="left:15%"></div>
+    <div class="hero-line" style="right:18%;opacity:.1"></div>
   </div>
-  <div class="hero-tag">🌍 Cotonou, Bénin · Afrique de l'Ouest</div>
-  <h1 class="hero-title">Travaille plus<br>vite grâce à<br><span class="hl">l'IA.</span></h1>
-  <p class="hero-sub">Sites web, bots Telegram, formation et tuteur numérique — des outils concrets pour les entrepreneurs d'Afrique de l'Ouest.<br><span style="font-family:var(--fm);font-size:.72rem;color:var(--teal);letter-spacing:.06em;margin-top:.4rem;display:block">IA ɖo mǐ tɔn · Fɔngbé kpo Français kpo · Cotonou, Bénin</span></p>
-  <div class="hero-btns">
-    <a href="#services" class="btn-p">Voir les services</a>
-    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="btn-g">🤖 Bot Telegram gratuit</a>
-  </div>
-  <div class="hero-stats">
-    <div class="hstat"><div class="hstat-n">7+</div><div class="hstat-l">Sites livrés</div></div>
-    <div class="hstat"><div class="hstat-n">7K+</div><div class="hstat-l">Tracks Produits</div></div>
-    <div class="hstat"><div class="hstat-n">24h</div><div class="hstat-l">Délai livraison</div></div>
+  <div class="hero-content">
+    <div class="hero-tag">Cotonou · Bénin · Afrique de l'Ouest</div>
+    <h1 class="hero-title">IA <span class="hl">hwé</span> mǐ tɔn.</h1>
+    <div class="hero-translation">La Maison IA.</div>
+    <p class="hero-sub">
+      La maison où se bâtit l'IA béninoise. Atelier à Cotonou, pépinière de formation encadrée, recherche publiée. De la découverte à la maîtrise.
+    </p>
+    <div class="hero-btns">
+      <a href="#pepiniere" class="btn-p">Entrer dans la Pépinière</a>
+      <a href="#b2g" class="btn-g">Partenariats institutionnels</a>
+    </div>
   </div>
 </header>
 
-<div class="ticker-wrap">
-  <div class="ticker">
-    <div class="ticker-item"><b>✦</b>Sites Web Pro</div>
-    <div class="ticker-item"><b>✦</b>Bot IA Sur Mesure · Dès 2 000 XOF</div>
-    <div class="ticker-item"><b>✦</b>Formation IA en Français</div>
-    <div class="ticker-item"><b>✦</b>Tuteur Numérique Bénin</div>
-    <div class="ticker-item"><b>✦</b>Studio Musical IA</div>
-    <div class="ticker-item"><b>✦</b>Zémi Vivant — Sécurité Routière</div>
-    <div class="ticker-item"><b>✦</b>Mobile Money · Livraison Rapide</div>
-    <div class="ticker-item"><b>✦</b>Sites Web Pro</div>
-    <div class="ticker-item"><b>✦</b>Bot IA Sur Mesure · Dès 2 000 XOF</div>
-    <div class="ticker-item"><b>✦</b>Formation IA en Français</div>
-    <div class="ticker-item"><b>✦</b>Tuteur Numérique Bénin</div>
-    <div class="ticker-item"><b>✦</b>Studio Musical IA</div>
-    <div class="ticker-item"><b>✦</b>Zémi Vivant — Sécurité Routière</div>
-    <div class="ticker-item"><b>✦</b>Mobile Money · Livraison Rapide</div>
-  </div>
-</div>
-
-<section class="services sec" id="services">
-  <div class="rev">
-    <div class="sec-lbl">// Services</div>
-    <h2 class="sec-h">Concret. Rapide.<br>Résultats mesurables.</h2>
-    <p class="sec-d">Prix fixes, délais tenus, paiement Mobile Money. Zéro jargon, zéro surprise.</p>
-  </div>
-  <div class="svc-grid rev2">
-    <div class="svc">
-      <span class="svc-icon">🌐</span>
-      <div class="svc-n">01 — Service phare</div>
-      <div class="svc-title">Création de Sites Web</div>
-      <p class="svc-desc">Vitrine, portfolio, immobilier, restaurant, mode, beauté, salon. Déployé sur Cloudflare — ultra rapide en Afrique. Livré en 48–72h.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-bottom:.8rem;font-family:var(--fm);font-size:.6rem">
-        <div style="border:1px solid var(--border);padding:.5rem;text-align:center"><div style="font-weight:700;color:var(--text)">ESSENTIEL</div><div style="color:var(--gold);font-size:.7rem;margin:.2rem 0">50 000 XOF</div><div style="color:var(--muted)">1 page · Rapide</div></div>
-        <div style="border:1px solid var(--gold);padding:.5rem;text-align:center;background:rgba(255,158,27,.05)"><div style="font-weight:700;color:var(--text)">PRO</div><div style="color:var(--gold);font-size:.7rem;margin:.2rem 0">150 000 XOF</div><div style="color:var(--muted)">5 pages · Photos</div></div>
-        <div style="border:1px solid var(--border);padding:.5rem;text-align:center"><div style="font-weight:700;color:var(--text)">PREMIUM</div><div style="color:var(--gold);font-size:.7rem;margin:.2rem 0">350 000 XOF</div><div style="color:var(--muted)">Illimité · Bot</div></div>
+<!-- HERO 2 · Maître Étude -->
+<section class="feature" id="tuteur">
+  <div class="feature-inner rev off">
+    <div class="feature-txt">
+      <div class="eyebrow">Éducation nationale · Live</div>
+      <h2>Le tuteur IA<br>du Bénin.</h2>
+      <p class="sub">Plateforme nationale d'aide aux devoirs alignée sur le programme officiel béninois, de la CI à la Terminale. Mathématiques, Français, Sciences, Histoire-Géographie, Philosophie. Accès web immédiat, sans inscription.</p>
+      <div class="btns">
+        <a href="https://maitreetude.pages.dev" target="_blank" rel="noopener" class="btn-p">Ouvrir Maître Étude</a>
+        <a href="#b2g" class="btn-g">Dossier institutionnel</a>
       </div>
-      <span class="tag tg">Hébergement inclus · Paiement Mobile Money</span>
     </div>
-    <div class="svc">
-      <span class="svc-icon">🤖</span>
-      <div class="svc-n">02 — On vous construit ça</div>
-      <div class="svc-title">Bot IA Sur Mesure</div>
-      <p class="svc-desc">Ventes automatiques, réponses clients, prise de commandes 24h/24. On conçoit et déploie votre bot sur Telegram, WhatsApp ou toute autre plateforme — de A à Z.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem">
-        <span class="tag tt">Construit pour vous</span>
-        <span class="tag tg">Livré en 24–48h</span>
-      </div>
-      <a href="https://t.me/maitreiabeninoisbot" target="_blank" style="font-family:var(--fm);font-size:.65rem;color:var(--teal);text-decoration:none;display:block;margin-bottom:.5rem">→ Voir un exemple en direct ↗</a>
-      <span class="tag tt">Dès 2 000 XOF</span>
-    </div>
-    <div class="svc">
-      <span class="svc-icon">🎵</span>
-      <div class="svc-n">🎁 Outil Gratuit</div>
-      <div class="svc-title">Studio Prompt Musical</div>
-      <p class="svc-desc">Outil gratuit : génère des prompts Suno AI optimisés pour 20 genres — Afrobeat, Gospel Fon, NY Drill, Tango, Lo-Fi et plus. Zéro compte, zéro inscription, résultat instantané.</p>
-      <a href="https://studio.iafacilebenin.com" target="_blank" style="font-family:var(--fm);font-size:.65rem;color:var(--teal);text-decoration:none;display:block;margin-bottom:.5rem">→ Essayer gratuitement ↗</a>
-      <span class="tag tt" style="background:var(--teal);color:#000;border-color:var(--teal)">100% Gratuit</span>
-    </div>
-    <div class="svc">
-      <span class="svc-icon">🎓</span>
-      <div class="svc-n">04 — Formation</div>
-      <div class="svc-title">IA Pratique — Français & Fongbé</div>
-      <p class="svc-desc">Apprenez à utiliser l'IA pour créer du contenu, gagner du temps et automatiser vos tâches. Modules en français <em>ɖo Fɔngbé mɛ</em> — adaptés au rythme africain.</p>
-      <a href="https://wa.me/2290151017042?text=Je veux m'inscrire à la formation IA" target="_blank" style="font-family:var(--fm);font-size:.65rem;color:var(--teal);text-decoration:none;display:block;margin-bottom:.5rem">→ S'inscrire via WhatsApp</a>
-      <span class="tag tg">1 000 – 10 000 XOF</span>
-    </div>
-    <div class="svc">
-      <span class="svc-icon">📚</span>
-      <div class="svc-n">05 — Éducation nationale</div>
-      <div class="svc-title">Tuteur Numérique Bénin</div>
-      <p class="svc-desc">Plateforme IA d'aide aux devoirs pour élèves CI–Terminale. Curriculum béninois officiel. Accès web immédiat, sans inscription.</p>
-      <span class="tag tt">Accès gratuit</span>
-    </div>
-
-    <div class="svc">
-      <span class="svc-icon">🦺</span>
-      <div class="svc-n">06 — Contenu institutionnel</div>
-      <div class="svc-title">Zémi Vivant — Sécurité Routière</div>
-      <p class="svc-desc">Série vidéo IA sur la sécurité routière au Bénin. Partenariats B2G : gouvernement, MCA-Bénin, NSIA et autres assureurs.</p>
-      <span class="tag tc">Partenariat institutionnel</span>
-    </div>
-    <div class="svc">
-      <span class="svc-icon">🎵</span>
-      <div class="svc-n">07 — Identité sonore</div>
-      <div class="svc-title">Identité Sonore IA</div>
-      <p class="svc-desc">Production musicale IA avec éléments culturels Fon. Jingles publicitaires, bandes-son, identité sonore pour marques et événements.</p>
-      <span class="tag tt">Sur devis</span>
+    <div class="feature-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+        <defs><linearGradient id="me-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDFAF5"/><stop offset="1" stop-color="#F5F0E8"/></linearGradient></defs>
+        <rect x="30" y="24" width="340" height="252" rx="16" fill="#1A1408"/>
+        <rect x="40" y="36" width="320" height="228" rx="10" fill="url(#me-bg)"/>
+        <rect x="50" y="48" width="120" height="10" rx="3" fill="#1A1408"/>
+        <circle cx="340" cy="53" r="7" fill="#FF9E1B"/>
+        <rect x="50" y="70" width="68" height="20" rx="10" fill="#009970"/>
+        <rect x="58" y="76.5" width="52" height="7" rx="2" fill="#FDFAF5"/>
+        <rect x="126" y="70" width="58" height="20" rx="10" fill="#FDFAF5" stroke="#D8CEBC"/>
+        <rect x="134" y="76.5" width="42" height="7" rx="2" fill="#7A6A50"/>
+        <rect x="192" y="70" width="64" height="20" rx="10" fill="#FDFAF5" stroke="#D8CEBC"/>
+        <rect x="200" y="76.5" width="48" height="7" rx="2" fill="#7A6A50"/>
+        <rect x="50" y="102" width="300" height="36" rx="8" fill="#EDE6D8"/>
+        <rect x="60" y="110" width="70" height="6" rx="2" fill="#FF9E1B"/>
+        <rect x="60" y="122" width="220" height="8" rx="2" fill="#1A1408"/>
+        <rect x="50" y="146" width="300" height="92" rx="8" fill="#FDFAF5" stroke="#D8CEBC"/>
+        <circle cx="62" cy="158" r="6" fill="#009970"/>
+        <rect x="74" y="155" width="48" height="6" rx="2" fill="#009970"/>
+        <rect x="60" y="170" width="270" height="5" rx="2" fill="#7A6A50" opacity=".7"/>
+        <rect x="60" y="180" width="250" height="5" rx="2" fill="#7A6A50" opacity=".5"/>
+        <rect x="60" y="194" width="180" height="22" rx="5" fill="#FFF5E5" stroke="#FF9E1B" stroke-dasharray="2,2"/>
+        <rect x="68" y="202" width="100" height="6" rx="2" fill="#1A1408"/>
+        <rect x="172" y="202" width="60" height="6" rx="2" fill="#FF9E1B"/>
+        <rect x="50" y="246" width="90" height="18" rx="9" fill="#1A1408"/>
+        <rect x="64" y="252" width="62" height="6" rx="2" fill="#FDFAF5"/>
+        <rect x="148" y="246" width="90" height="18" rx="9" fill="#FDFAF5" stroke="#D8CEBC"/>
+        <rect x="162" y="252" width="62" height="6" rx="2" fill="#7A6A50"/>
+      </svg>
     </div>
   </div>
 </section>
 
-<section class="lrdy sec" id="lrdy">
-  <div class="rev">
-    <div class="sec-lbl">// Studio Musical IA</div>
-    <h2 class="sec-h">Crée ta musique<br>avec l'IA.</h2>
-    <p class="sec-d">Décris ta vibe, le studio génère instantanément un prompt Suno optimisé et l'ouvre directement dans Suno en un clic. 20 genres disponibles.</p>
-  </div>
-  <div class="rev2" style="display:grid;grid-template-columns:1fr;gap:1rem">
-    <div style="border:1px solid var(--border);padding:1.5rem;background:var(--s1);display:flex;flex-direction:column;gap:1rem">
-      <div style="display:flex;flex-wrap:wrap;gap:.4rem">
-        <span class="tag tt">Afrobeat Fon</span>
-        <span class="tag tg">Gospel Fongbé</span>
-        <span class="tag tt">NY Drill</span>
-        <span class="tag tg">Trap Cotonou</span>
-        <span class="tag tt">Tango</span>
-        <span class="tag tg">Lo-Fi</span>
-        <span class="tag tt">Vodoun</span>
-        <span class="tag tg">Cinematic</span>
-        <span class="tag tt">+ 12 genres</span>
-      </div>
-      <p style="font-size:.83rem;color:var(--muted);line-height:1.7">Zéro compte requis. Zéro API. Le prompt est généré localement et ouvre Suno directement avec ton idée pré-remplie.</p>
-      <div style="display:flex;gap:.7rem;flex-wrap:wrap">
-        <a href="https://studio.iafacilebenin.com" target="_blank" class="btn-p">Ouvrir le Studio ↗</a>
-        <a href="https://suno.com" target="_blank" class="btn-g">Suno AI ↗</a>
+<!-- HERO 3 · ATELIER (formerly Infrastructure) -->
+<section class="feature alt reverse" id="atelier">
+  <div class="feature-inner rev off">
+    <div class="feature-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+        <rect x="28" y="24" width="344" height="252" rx="14" fill="#1A1408"/>
+        <rect x="28" y="24" width="344" height="32" rx="14" fill="#261c10"/>
+        <circle cx="48" cy="40" r="4" fill="#E8204A"/>
+        <circle cx="62" cy="40" r="4" fill="#FF9E1B"/>
+        <circle cx="76" cy="40" r="4" fill="#009970"/>
+        <rect x="150" y="34" width="140" height="12" rx="3" fill="#1A1408"/>
+        <text x="220" y="43" fill="#7A6A50" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">ai.iafacilebenin.com</text>
+        <rect x="46" y="76" width="14" height="14" rx="3" fill="#009970"/>
+        <text x="72" y="87" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="10">GATEWAY · FastAPI · PM2</text>
+        <text x="340" y="87" fill="#009970" font-family="DM Mono,monospace" font-size="10" text-anchor="end">200 OK</text>
+        <rect x="46" y="102" width="14" height="14" rx="3" fill="#009970"/>
+        <text x="72" y="113" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="10">MLX · Mistral-7B-4bit</text>
+        <text x="340" y="113" fill="#009970" font-family="DM Mono,monospace" font-size="10" text-anchor="end">READY</text>
+        <rect x="46" y="128" width="14" height="14" rx="3" fill="#009970"/>
+        <text x="72" y="139" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="10">Cloudflare Tunnel</text>
+        <text x="340" y="139" fill="#009970" font-family="DM Mono,monospace" font-size="10" text-anchor="end">LIVE</text>
+        <rect x="46" y="154" width="14" height="14" rx="3" fill="#FF9E1B"/>
+        <text x="72" y="165" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="10">Rate limit · Bearer auth</text>
+        <text x="340" y="165" fill="#FF9E1B" font-family="DM Mono,monospace" font-size="10" text-anchor="end">ACTIVE</text>
+        <line x1="46" y1="184" x2="354" y2="184" stroke="#7A6A50" stroke-opacity=".2"/>
+        <rect x="46" y="198" width="74" height="48" rx="8" fill="#261c10" stroke="#FF9E1B"/>
+        <text x="83" y="218" fill="#FF9E1B" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">Client</text>
+        <text x="83" y="234" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">FR · Fɔn</text>
+        <path d="M120 222 L152 222" stroke="#FDFAF5" stroke-width="1.2" stroke-dasharray="3,3"/>
+        <rect x="156" y="198" width="88" height="48" rx="8" fill="#261c10" stroke="#FDFAF5"/>
+        <text x="200" y="218" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">Gateway</text>
+        <text x="200" y="234" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">Cotonou</text>
+        <path d="M244 222 L276 222" stroke="#FDFAF5" stroke-width="1.2" stroke-dasharray="3,3"/>
+        <rect x="280" y="198" width="74" height="48" rx="8" fill="#261c10" stroke="#009970"/>
+        <text x="317" y="218" fill="#009970" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">MLX Core</text>
+        <text x="317" y="234" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">Local · M4</text>
+        <text x="200" y="266" fill="#7A6A50" font-family="DM Mono,monospace" font-size="8" text-anchor="middle">Hébergé 100% au Bénin · Zéro dépendance cloud étranger</text>
+      </svg>
+    </div>
+    <div class="feature-txt">
+      <div class="eyebrow">L'atelier · Cotonou</div>
+      <h2>L'atelier<br>de Cotonou.</h2>
+      <p class="sub">Là où se construit chaque outil de la maison. Gateway FastAPI, modèle MLX local, tunnel Cloudflare, authentification par jeton. Nos données restent ici. Notre code reste ici. Notre moteur tourne ici.</p>
+      <div class="btns">
+        <a href="https://ai.iafacilebenin.com" target="_blank" rel="noopener" class="btn-p">Documentation</a>
+        <a href="#b2g" class="btn-g">Briefing institutionnel</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="tuteur sec" id="tuteur">
-  <div class="rev">
-    <div class="sec-lbl">// Éducation Numérique</div>
-    <h2 class="sec-h">Tuteur IA<br>pour le Bénin.</h2>
-    <p class="sec-d">Plateforme nationale d'aide aux devoirs. Programme béninois officiel, CI jusqu'à la Terminale. Disponible maintenant.</p>
+<!-- PÉPINIÈRE · 4-step journey -->
+<section class="pepinière" id="pepiniere">
+  <div class="pepinière-head rev off">
+    <div class="eyebrow">La Pépinière</div>
+    <h2>De zéro à maîtrise.</h2>
+    <p>Un parcours encadré de bout en bout. Vous entrez curieux, vous repartez autonome — avec vos propres outils, votre site, votre méthode. Gratuit à l'entrée, premium à la sortie.</p>
   </div>
-  <div class="rev2">
-    <a href="https://maitreetude.pages.dev" target="_blank" class="tuteur-card">
-      <div class="tuteur-top">
-        <div class="tuteur-badge">🎓 LIVE</div>
-        <div class="tuteur-title">Maître Étude — Bénin</div>
-      </div>
-      <p class="tuteur-desc">Ton assistant scolaire IA disponible 24h/24. Explications en français, exercices corrigés, méthodes adaptées au programme béninois officiel. Mathématiques, Français, Sciences, Histoire-Géo et plus.</p>
-      <div class="tuteur-features">
-        <span class="tf">CI → Terminale</span>
-        <span class="tf">Programme béninois</span>
-        <span class="tf">Accès gratuit</span>
-        <span class="tf">Sans inscription</span>
-        <span class="tf">Mobile-first</span>
-        <span class="tf">Disponible 24h/24</span>
-      </div>
-      <span class="tuteur-link">→ Ouvrir le Tuteur ↗</span>
+
+  <div class="pepinière-grid">
+
+    <!-- 01 · DÉCOUVREZ -->
+    <a href="https://gratuit.iafacilebenin.com" target="_blank" rel="noopener" class="pep-step">
+      <div class="pep-n">01</div>
+      <div class="pep-eyebrow">Découvrez</div>
+      <div class="pep-title">Les outils, gratuits.</div>
+      <p class="pep-desc">Essayez l'IA sans friction. Studio musical, bot Telegram, tuteur. Zéro compte, zéro paiement.</p>
+      <span class="pep-link">gratuit.iafacilebenin.com <span class="arrow">→</span></span>
     </a>
+
+    <!-- 02 · APPRENEZ -->
+    <a href="https://wa.me/2290151017042?text=Je%20veux%20rejoindre%20la%20P%C3%A9pini%C3%A8re%20%E2%80%94%20Formation%20IA" target="_blank" rel="noopener" class="pep-step">
+      <div class="pep-n">02</div>
+      <div class="pep-eyebrow">Apprenez</div>
+      <div class="pep-title">La formation encadrée.</div>
+      <p class="pep-desc">Modules guidés en français et Fɔngbè. De la fluency IA à l'automatisation de votre activité.</p>
+      <span class="pep-link">Rejoindre la Pépinière <span class="arrow">→</span></span>
+    </a>
+
+    <!-- 03 · COMMANDEZ -->
+    <a href="https://iafacilebenin.com/websites" target="_blank" rel="noopener" class="pep-step">
+      <div class="pep-n">03</div>
+      <div class="pep-eyebrow">Commandez</div>
+      <div class="pep-title">Votre site, votre bot.</div>
+      <p class="pep-desc">Site web en 48h, bot sur mesure Telegram ou WhatsApp, outil IA personnalisé. Paiement Mobile Money.</p>
+      <span class="pep-link">Passer commande <span class="arrow">→</span></span>
+    </a>
+
+    <!-- 04 · RAYONNEZ -->
+    <a href="#b2g" class="pep-step">
+      <div class="pep-n">04</div>
+      <div class="pep-eyebrow">Rayonnez</div>
+      <div class="pep-title">L'excellence sur mesure.</div>
+      <p class="pep-desc">Infrastructure dédiée, partenariats institutionnels, accompagnement end-to-end pour projets à grande échelle.</p>
+      <span class="pep-link">Partenariats B2G <span class="arrow">→</span></span>
+    </a>
+
   </div>
 </section>
 
-<section class="sec" id="creation" style="background:var(--s2);border-top:1px solid var(--border)">
-  <div class="rev">
-    <div class="sec-lbl">// Création de Contenu IA</div>
-    <h2 class="sec-h">Génère des visuels<br>pro en 1 clic.</h2>
-    <p class="sec-d">Images IA haute qualité pour tes réseaux, produits, publicités et contenus. Powered by IA — résultats instantanés.</p>
+<!-- TILES 2x2 — Gratuit first, /websites second -->
+<section class="tiles" id="recherche">
+  <div class="tiles-head rev off">
+    <div class="eyebrow">Dans la maison</div>
+    <h2>Ce qui vit<br>dans nos murs.</h2>
+    <p>Produits en service, outils gratuits, recherche publiée, protocoles ouverts. Tout ce qui paraît ici est en ligne, maintenant.</p>
   </div>
-  <div class="rev2" style="display:grid;grid-template-columns:1fr;gap:1rem">
-    <div style="border:2px solid var(--gold);padding:2rem;background:var(--bg);position:relative;overflow:hidden">
-      <!-- Gold glow accent -->
-      <div style="position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(255,158,27,.12),transparent 70%);pointer-events:none"></div>
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem">
-        <span style="font-size:1.8rem">🎨</span>
-        <div>
-          <div style="font-family:var(--fm);font-size:.58rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem">Accès Premium</div>
-          <div style="font-size:1.1rem;font-weight:700">Studio Création Visuelle</div>
-        </div>
-        <div style="margin-left:auto;background:var(--gold);color:#000;font-family:var(--fm);font-size:.6rem;font-weight:700;padding:.35rem .7rem;letter-spacing:.08em">BIENTÔT</div>
+
+  <div class="tile-grid">
+
+    <!-- TILE 1 · GRATUIT (promoted to first) -->
+    <a href="https://gratuit.iafacilebenin.com" target="_blank" rel="noopener" class="tile dark">
+      <div class="tile-visual">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+          <defs>
+            <radialGradient id="grat-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#FF9E1B" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#FF9E1B" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect x="0" y="0" width="400" height="250" fill="url(#grat-glow)"/>
+          <circle cx="200" cy="115" r="62" fill="none" stroke="#FF9E1B" stroke-width="2"/>
+          <circle cx="200" cy="115" r="54" fill="none" stroke="#FF9E1B" stroke-width=".8" opacity=".5"/>
+          <text x="200" y="108" fill="#FF9E1B" font-family="Syne,sans-serif" font-size="22" font-weight="800" text-anchor="middle" letter-spacing="2">GRATUIT</text>
+          <text x="200" y="128" fill="#7A6A50" font-family="DM Mono,monospace" font-size="8" text-anchor="middle" letter-spacing="2">0 XOF · 0 COMPTE</text>
+          <g font-family="DM Mono,monospace" font-size="8">
+            <g transform="translate(78,58)">
+              <rect x="0" y="0" width="70" height="24" rx="12" fill="#261c10" stroke="#FF9E1B" stroke-opacity=".5"/>
+              <path d="M8 12h4l2-6 3 12 2-8 2 4 2-2 2 1h5" stroke="#FF9E1B" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="40" y="15" fill="#FDFAF5" text-anchor="start">Studio</text>
+            </g>
+            <g transform="translate(252,58)">
+              <rect x="0" y="0" width="70" height="24" rx="12" fill="#261c10" stroke="#009970" stroke-opacity=".5"/>
+              <rect x="6" y="7" width="14" height="10" rx="2" fill="none" stroke="#009970" stroke-width="1.3"/>
+              <circle cx="10" cy="12" r="1" fill="#009970"/>
+              <circle cx="16" cy="12" r="1" fill="#009970"/>
+              <text x="28" y="15" fill="#FDFAF5" text-anchor="start">Bot Télégram</text>
+            </g>
+            <g transform="translate(60,178)">
+              <rect x="0" y="0" width="90" height="24" rx="12" fill="#261c10" stroke="#FDFAF5" stroke-opacity=".4"/>
+              <path d="M6 14l6-3 6 3-6 3-6-3z" fill="#FDFAF5"/>
+              <path d="M12 14v5" stroke="#FDFAF5" stroke-width="1"/>
+              <text x="24" y="15" fill="#FDFAF5" text-anchor="start">Maître Étude</text>
+            </g>
+            <g transform="translate(252,178)">
+              <rect x="0" y="0" width="70" height="24" rx="12" fill="#261c10" stroke="#E8204A" stroke-opacity=".5"/>
+              <text x="35" y="15" fill="#E8204A" text-anchor="middle">+ d'outils</text>
+            </g>
+          </g>
+          <text x="200" y="230" fill="#7A6A50" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">gratuit.iafacilebenin.com</text>
+        </svg>
       </div>
-      <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem">Génération d'images IA, visuels pour réseaux sociaux, affiches publicitaires, identité visuelle. Accès réservé aux membres — paiement Mobile Money, activation immédiate.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem">
-        <span class="tag tg">Images IA</span>
-        <span class="tag tg">Réseaux sociaux</span>
-        <span class="tag tg">Affiches & Pubs</span>
-        <span class="tag tc">Accès Payant</span>
+      <div class="tile-body">
+        <div class="tile-n">Outils IA · Gratuits</div>
+        <div class="tile-title">L'IA, sans friction.</div>
+        <p class="tile-desc">Accès direct aux outils de la maison : générateur de prompts musicaux, bot Telegram, aide aux devoirs. Zéro inscription, zéro paiement — juste essayer.</p>
+        <span class="tile-link">Essayer gratuitement <span class="arrow">→</span></span>
       </div>
-      <div style="border-top:1px solid var(--border);padding-top:1.2rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
-        <a href="https://wa.me/2290151017042?text=Je%20veux%20acc%C3%A9der%20au%20Studio%20Cr%C3%A9ation%20Visuelle" target="_blank" class="btn-p" style="font-size:.7rem;padding:.7rem 1.3rem">💬 Rejoindre la liste d'attente</a>
-        <span style="font-family:var(--fm);font-size:.65rem;color:var(--muted)">Paiement Mobile Money · Accès instantané</span>
+    </a>
+
+    <!-- TILE 2 · /websites -->
+    <a href="https://iafacilebenin.com/websites" target="_blank" rel="noopener" class="tile">
+      <div class="tile-visual">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+          <rect x="30" y="30" width="340" height="190" rx="10" fill="#FDFAF5" stroke="#D8CEBC"/>
+          <rect x="30" y="30" width="340" height="24" rx="10" fill="#EDE6D8"/>
+          <circle cx="46" cy="42" r="3.5" fill="#E8204A"/>
+          <circle cx="58" cy="42" r="3.5" fill="#FF9E1B"/>
+          <circle cx="70" cy="42" r="3.5" fill="#009970"/>
+          <rect x="90" y="36" width="200" height="12" rx="6" fill="#FDFAF5"/>
+          <text x="190" y="44.5" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">iafacilebenin.com/websites</text>
+          <rect x="50" y="72" width="120" height="14" rx="2" fill="#1A1408"/>
+          <rect x="50" y="94" width="220" height="7" rx="2" fill="#7A6A50" opacity=".4"/>
+          <rect x="50" y="106" width="190" height="7" rx="2" fill="#7A6A50" opacity=".3"/>
+          <rect x="50" y="126" width="80" height="26" rx="13" fill="#FF9E1B"/>
+          <rect x="62" y="134" width="56" height="8" rx="2" fill="#1A1408"/>
+          <rect x="230" y="72" width="120" height="110" rx="6" fill="#F5F0E8" stroke="#D8CEBC"/>
+          <circle cx="265" cy="105" r="14" fill="#FF9E1B"/>
+          <polygon points="245,162 275,132 310,162 335,142 335,182 245,182" fill="#009970" opacity=".6"/>
+          <g font-family="DM Mono,monospace" font-size="7">
+            <rect x="50" y="192" width="84" height="18" rx="9" fill="#FF9E1B"/>
+            <text x="92" y="204" fill="#1A1408" text-anchor="middle" font-weight="700">LIVRÉ EN 48 H</text>
+            <rect x="144" y="192" width="68" height="18" rx="9" fill="#EDE6D8" stroke="#D8CEBC"/>
+            <text x="178" y="204" fill="#1A1408" text-anchor="middle">Cloudflare</text>
+            <rect x="222" y="192" width="80" height="18" rx="9" fill="#EDE6D8" stroke="#D8CEBC"/>
+            <text x="262" y="204" fill="#1A1408" text-anchor="middle">Mobile Money</text>
+          </g>
+          <g transform="translate(306,66) rotate(12)">
+            <path d="M0 0 L50 0 L60 12 L50 24 L0 24 Z" fill="#1A1408"/>
+            <circle cx="50" cy="12" r="2.5" fill="#FDFAF5"/>
+            <text x="22" y="16" fill="#FF9E1B" font-family="DM Mono,monospace" font-size="8" text-anchor="middle" font-weight="700">dès 50K</text>
+          </g>
+          <text x="200" y="238" fill="#7A6A50" font-family="DM Mono,monospace" font-size="9" text-anchor="middle">iafacilebenin.com/websites</text>
+        </svg>
       </div>
+      <div class="tile-body">
+        <div class="tile-n">Site web professionnel</div>
+        <div class="tile-title">Un site en 48 heures.</div>
+        <p class="tile-desc">Vitrine, portfolio, immobilier, restaurant, mode. Déployé sur Cloudflare, paiement Mobile Money. Prix fixe, délai tenu — dès 50 000 XOF.</p>
+        <span class="tile-link">Commander maintenant <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- TILE 3 · Fɔngbè Research -->
+    <a href="https://doi.org/10.5281/zenodo.19080628" target="_blank" rel="noopener" class="tile dark">
+      <div class="tile-visual">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+          <g transform="translate(0,130)">
+            <rect x="20" y="-8" width="4" height="16" rx="2" fill="#FF9E1B"/>
+            <rect x="30" y="-18" width="4" height="36" rx="2" fill="#FF9E1B"/>
+            <rect x="40" y="-30" width="4" height="60" rx="2" fill="#FF9E1B"/>
+            <rect x="50" y="-24" width="4" height="48" rx="2" fill="#FF9E1B"/>
+            <rect x="60" y="-42" width="4" height="84" rx="2" fill="#FF9E1B"/>
+            <rect x="70" y="-35" width="4" height="70" rx="2" fill="#FF9E1B"/>
+            <rect x="80" y="-22" width="4" height="44" rx="2" fill="#FF9E1B"/>
+            <rect x="90" y="-45" width="4" height="90" rx="2" fill="#FF9E1B"/>
+            <rect x="100" y="-32" width="4" height="64" rx="2" fill="#FF9E1B"/>
+            <rect x="110" y="-18" width="4" height="36" rx="2" fill="#FF9E1B"/>
+            <rect x="120" y="-28" width="4" height="56" rx="2" fill="#FF9E1B" opacity=".7"/>
+            <rect x="130" y="-40" width="4" height="80" rx="2" fill="#FF9E1B" opacity=".7"/>
+            <rect x="140" y="-30" width="4" height="60" rx="2" fill="#FF9E1B" opacity=".7"/>
+            <rect x="150" y="-15" width="4" height="30" rx="2" fill="#FF9E1B" opacity=".5"/>
+            <rect x="160" y="-22" width="4" height="44" rx="2" fill="#FF9E1B" opacity=".5"/>
+          </g>
+          <line x1="200" y1="60" x2="200" y2="200" stroke="#7A6A50" stroke-width=".8"/>
+          <line x1="200" y1="200" x2="360" y2="200" stroke="#7A6A50" stroke-width=".8"/>
+          <circle cx="230" cy="170" r="5" fill="#009970"/>
+          <circle cx="270" cy="130" r="5" fill="#009970"/>
+          <circle cx="310" cy="90" r="5" fill="#009970"/>
+          <text x="230" y="188" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="8" text-anchor="middle">F1</text>
+          <text x="270" y="148" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="8" text-anchor="middle">F2</text>
+          <text x="310" y="108" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="8" text-anchor="middle">F3</text>
+          <text x="30" y="50" fill="#FF9E1B" font-family="DM Mono,monospace" font-size="11">F0 = 113 Hz</text>
+          <text x="30" y="66" fill="#7A6A50" font-family="DM Mono,monospace" font-size="8">Ton haut · Ton bas</text>
+          <text x="210" y="74" fill="#009970" font-family="DM Mono,monospace" font-size="10">Formants Fɔn</text>
+          <text x="20" y="225" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="10">/ɖ/  /ɔ/  /ŋ/  /ɛ̃/</text>
+        </svg>
+      </div>
+      <div class="tile-body">
+        <div class="tile-n">Recherche linguistique</div>
+        <div class="tile-title">Fɔngbè · NLP &amp; TTS</div>
+        <p class="tile-desc">Constantes acoustiques publiées, corpus AZƆNGBLEGBLE transcrit, alignement zéro-shot IPA. DOI Zenodo, chaîne de propriété ancrée sur Bitcoin.</p>
+        <span class="tile-link">Lire la publication <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- TILE 4 · SDTCP -->
+    <a href="https://github.com/iafacilebenin/sovereign-digital-twin-protocol" target="_blank" rel="noopener" class="tile dark">
+      <div class="tile-visual">
+        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+          <g transform="translate(60,45)">
+            <rect x="0" y="0" width="60" height="60" rx="10" fill="#261c10" stroke="#FF9E1B"/>
+            <circle cx="30" cy="24" r="8" fill="#FF9E1B"/>
+            <rect x="18" y="36" width="24" height="12" rx="6" fill="#FF9E1B" opacity=".4"/>
+            <text x="30" y="76" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">VISUAL</text>
+            <rect x="110" y="0" width="60" height="60" rx="10" fill="#261c10" stroke="#009970"/>
+            <rect x="128" y="20" width="3" height="20" fill="#009970"/>
+            <rect x="134" y="14" width="3" height="32" fill="#009970"/>
+            <rect x="140" y="22" width="3" height="16" fill="#009970"/>
+            <rect x="146" y="10" width="3" height="40" fill="#009970"/>
+            <rect x="152" y="18" width="3" height="24" fill="#009970"/>
+            <text x="140" y="76" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">VOICE</text>
+            <rect x="220" y="0" width="60" height="60" rx="10" fill="#261c10" stroke="#E8204A"/>
+            <rect x="232" y="16" width="36" height="4" rx="2" fill="#E8204A"/>
+            <rect x="232" y="26" width="28" height="4" rx="2" fill="#E8204A" opacity=".7"/>
+            <rect x="232" y="36" width="32" height="4" rx="2" fill="#E8204A" opacity=".5"/>
+            <rect x="232" y="46" width="24" height="4" rx="2" fill="#E8204A" opacity=".3"/>
+            <text x="250" y="76" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">PERSONA</text>
+            <rect x="55" y="100" width="60" height="60" rx="10" fill="#261c10" stroke="#FDFAF5"/>
+            <rect x="72" y="112" width="26" height="26" rx="3" fill="none" stroke="#FDFAF5"/>
+            <circle cx="85" cy="125" r="5" fill="#FDFAF5"/>
+            <text x="85" y="148" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="6" text-anchor="middle">BTC #945316</text>
+            <text x="85" y="176" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">IP CHAIN</text>
+            <rect x="165" y="100" width="60" height="60" rx="10" fill="#261c10" stroke="#FF9E1B"/>
+            <rect x="177" y="115" width="36" height="30" rx="3" fill="none" stroke="#FF9E1B"/>
+            <circle cx="186" cy="128" r="2" fill="#FF9E1B"/>
+            <circle cx="195" cy="128" r="2" fill="#FF9E1B"/>
+            <circle cx="204" cy="128" r="2" fill="#FF9E1B"/>
+            <text x="195" y="176" fill="#FDFAF5" font-family="DM Mono,monospace" font-size="7" text-anchor="middle">COMPUTE</text>
+            <text x="285" y="130" fill="#FF9E1B" font-family="DM Mono,monospace" font-size="10" text-anchor="start">SDTCP</text>
+            <text x="285" y="146" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="start">v1.0</text>
+            <text x="285" y="158" fill="#7A6A50" font-family="DM Mono,monospace" font-size="7" text-anchor="start">MIT</text>
+          </g>
+        </svg>
+      </div>
+      <div class="tile-body">
+        <div class="tile-n">Protocole ouvert</div>
+        <div class="tile-title">SDTCP · Jumeau Numérique</div>
+        <p class="tile-desc">Protocole à 5 composants pour la création d'un Human Digital Twin. Certification H/O/C/N/S, ancrages Bitcoin, code MIT sur GitHub.</p>
+        <span class="tile-link">Voir le protocole <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- B2G -->
+<section class="b2g" id="b2g">
+  <div class="b2g-inner">
+    <div>
+      <div class="eyebrow">Partenariats institutionnels</div>
+      <h3>Gouvernements, ministères, agences — nous bâtissons l'IA qui reste au Bénin.</h3>
+    </div>
+    <a href="mailto:contact@iafacilebenin.com?subject=Partenariat%20institutionnel%20%E2%80%94%20IA%20Facile%20B%C3%A9nin">Contacter la direction →</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="eyebrow">Entrer dans la Maison</div>
+    <h2>Travaillons ensemble.</h2>
+    <p>Institutions, ministères, partenaires, élèves de la Pépinière — un seul point d'entrée. Réponse sous 24 h ouvrées, en français ou en anglais.</p>
+    <div class="contact-btns">
+      <a href="mailto:contact@iafacilebenin.com?subject=Prise%20de%20contact%20%E2%80%94%20IA%20Facile%20B%C3%A9nin" class="btn-p">contact@iafacilebenin.com</a>
+      <a href="https://wa.me/2290151017042" target="_blank" rel="noopener" class="btn-g">WhatsApp · +229 01 51 01 70 42</a>
     </div>
   </div>
 </section>
 
-<section class="brands sec" id="projets">
-  <div class="rev">
-    <div class="sec-lbl">// L'écosystème IA Facile</div>
-    <h2 class="sec-h">Un empire.<br>Plusieurs fronts.</h2>
-    <p class="sec-d">Chaque projet est une unité autonome avec sa mission, son audience et son modèle de revenus.</p>
-  </div>
-  <div class="brand-grid rev2">
-    <a href="#services" class="brand-card">
-      <div class="b-badge ba">IA</div>
-      <div class="brand-info"><h3>IA Facile Bénin</h3><p>Hub principal — formation, bots, sites web pour entrepreneurs francophones.</p></div>
-    </a>
-    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="brand-card">
-      <div class="b-badge bt">🤖</div>
-      <div class="brand-info"><h3>Bot Telegram IA</h3><p>@maitreiabeninoisbot — assistant IA gratuit. Teste maintenant, upgrade quand tu veux.</p></div>
-    </a>
-    <a href="https://maitreetude.pages.dev" target="_blank" class="brand-card">
-      <div class="b-badge bt">📚</div>
-      <div class="brand-info"><h3>Maître Étude</h3><p>Tuteur IA national. Programme béninois CI–Terminale. En ligne maintenant.</p></div>
-    </a>
-    <a href="https://studio.iafacilebenin.com" target="_blank" class="brand-card">
-      <div class="b-badge bd">🎵</div>
-      <div class="brand-info"><h3>Studio Prompt Musical</h3><p>20 genres musicaux. Prompt Suno optimisé en 1 clic. Afrobeat, Drill, Tango et plus.</p></div>
-    </a>
-    <a href="#creation" class="brand-card">
-      <div class="b-badge" style="background:var(--gold);color:#000">🎨</div>
-      <div class="brand-info"><h3>Studio Création Visuelle</h3><p>Images IA premium. Visuels pro pour réseaux & pubs. Accès membres — bientôt disponible.</p></div>
-    </a>
-    <a href="#services" class="brand-card">
-      <div class="b-badge bc">🦺</div>
-      <div class="brand-info"><h3>Zémi Vivant</h3><p>Sécurité routière par l'IA. B2G : gouvernement, MCA-Bénin, assureurs.</p></div>
-    </a>
-    <a href="#tuteur" class="brand-card">
-      <div class="b-badge" style="background:var(--gold);color:#000">🎨</div>
-      <div class="brand-info"><h3>Contenu IA <span style="font-family:var(--fm);font-size:.58rem;background:var(--gold);color:#000;padding:.1rem .4rem;margin-left:.3rem;letter-spacing:.06em">PREMIUM</span></h3><p>Génération d'images & visuels IA. Accès sur paiement Mobile Money.</p></div>
-    </a>
-    <a href="#services" class="brand-card">
-      <div class="b-badge ba">🌐</div>
-      <div class="brand-info"><h3>Web Service</h3><p>Sites vitrines livrés en 48h. Immobilier, resto, mode, beauté. Cloudflare ultra-rapide.</p></div>
-    </a>
-  </div>
-</section>
-
-<section class="cta" id="contact">
-  <div class="cta-ghost">CONTACT</div>
-  <div class="sec-lbl">// Parlons-nous</div>
-  <h2 class="sec-h">Prêt à commencer ?</h2>
-  <p class="sec-d" style="margin:0 auto 2rem">Devis gratuit sous 24h. Paiement Mobile Money MTN ou Celtiis. Livraison rapide.</p>
-  <div class="contact-grid rev">
-    <a href="https://wa.me/2290151017042?text=Bonjour%2C%20je%20veux%20un%20devis" target="_blank" class="contact-item">
-      <span class="contact-icon">💬</span>
-      <div><div class="contact-label">WhatsApp / Appel</div><div class="contact-val">+229 01 51 01 70 42</div></div>
-    </a>
-    <div class="contact-item">
-      <span class="contact-icon">💰</span>
-      <div>
-        <div class="contact-label">Mobile Money (MTN / Celtiis)</div>
-        <div class="contact-val">MTN &nbsp;+229 01 51 01 70 42</div>
-        <div class="contact-val" style="margin-top:.3rem">Celtiis &nbsp;+229 01 40 46 24 24</div>
-      </div>
-    </div>
-    <a href="https://t.me/maitreiabeninoisbot" target="_blank" class="contact-item">
-      <span class="contact-icon">🤖</span>
-      <div><div class="contact-label">Bot IA — Exemple</div><div class="contact-val">@maitreiabeninoisbot</div></div>
-    </a>
-    <a href="/cdn-cgi/l/email-protection#583b37362c393b2c1831393e393b31343d3a3d363136763b3735" class="contact-item">
-      <span class="contact-icon">📧</span>
-      <div><div class="contact-label">Email</div><div class="contact-val"><span class="__cf_email__" data-cfemail="31525e5f45505245715850575052585d5453545f585f1f525e5c">[email&#160;protected]</span></div></div>
-    </a>
-  </div>
-</section>
-
+<!-- Footer -->
 <footer>
-  <div>
-    <div class="f-logo">IA Facile Bénin</div>
-    <div class="f-copy">© 2026 SHAP SHAP SARL — RCCM RB/COT/21 B 31055 — Cotonou, Bénin</div>
+  <div class="foot-grid">
+    <div class="foot-col">
+      <h4>La Maison IA</h4>
+      <div class="foot-intro">IA hwé mǐ tɔn. La maison où se bâtit l'IA béninoise. Cotonou.</div>
+    </div>
+    <div class="foot-col">
+      <h4>La Maison</h4>
+      <a href="#tuteur">Maître Étude</a>
+      <a href="#atelier">L'Atelier · Cotonou</a>
+      <a href="#pepiniere">La Pépinière</a>
+      <a href="#recherche">Recherche &amp; IP</a>
+    </div>
+    <div class="foot-col">
+      <h4>Produits</h4>
+      <a href="https://gratuit.iafacilebenin.com" target="_blank" rel="noopener">Outils gratuits</a>
+      <a href="https://iafacilebenin.com/websites" target="_blank" rel="noopener">Sites web · 48 h</a>
+      <a href="https://wa.me/2290151017042?text=Je%20veux%20rejoindre%20la%20P%C3%A9pini%C3%A8re" target="_blank" rel="noopener">Pépinière · Formation</a>
+      <a href="https://github.com/iafacilebenin/sovereign-digital-twin-protocol" target="_blank" rel="noopener">SDTCP</a>
+    </div>
+    <div class="foot-col">
+      <h4>Institutions</h4>
+      <a href="#b2g">Partenariats B2G</a>
+      <a href="#b2g">Zémi Vivant</a>
+      <a href="mailto:contact@iafacilebenin.com">Direction</a>
+    </div>
   </div>
-  <div class="f-links">
-    <a href="#services">Services</a>
-    <a href="#lrdy">Studio</a>
-    <a href="#tuteur">Tuteur</a>
-    <a href="#projets">Projets</a>
-    <a href="https://t.me/maitreiabeninoisbot" target="_blank">Bot IA</a>
-    <a href="#contact">Contact</a>
+  <div class="foot-legal">
+    <div><b>IA FACILE BENIN SARL</b> · RCCM RB/COT/26 B 42719 · IFU 3202697019650 · Cotonou, Bénin</div>
+    <div>© 2026 · Édité par <b>SHAP SHAP SARL</b> · RCCM RB/COT/21 B 31055</div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Scroll reveal — content visible by default, animation on scroll is enhancement only
-const revEls = document.querySelectorAll('.rev,.rev2');
-const ro = new IntersectionObserver(e => {
-  e.forEach(x => { if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target);} });
-},{threshold:0.05});
-revEls.forEach(el => ro.observe(el));
-
-// Smooth anchors
-document.querySe
+<script>
+  const rev = document.querySelectorAll('.rev');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('off'); e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  rev.forEach(el => io.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (ev) => {
+      const id = a.getAttribute('href');
+      if (id && id.length > 1) {
+        const t = document.querySelector(id);
+        if (t) { ev.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+</script>
+</body>
+</html>
